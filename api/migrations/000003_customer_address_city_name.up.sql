@@ -1,0 +1,3 @@
+ALTER TABLE customer_addresses
+ADD COLUMN IF NOT EXISTS city_name VARCHAR(120) NOT NULL DEFAULT '';
+

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "What gifts can I order on Giftlaya?",
+    "answer": "You can order fresh flowers, cakes, indoor plants, chocolates, gift hampers, and personalised gifts like photo mugs, cushions, and frames. We also do complete balloon decoration at home for birthdays, anniversaries, and baby welcomes."
+  },
+  {
+    "id": 2,
+    "question": "Does Giftlaya deliver gifts the same day?",
+    "answer": "Yes. Same-day delivery is available for cakes, flowers, and decorations in most of our 100+ cities. Order by the afternoon and choose a same-day slot at checkout. Midnight delivery is also available in major cities."
+  },
+  {
+    "id": 3,
+    "question": "Does Giftlaya do balloon decoration at home?",
+    "answer": "Yes, this is one of our most popular services. Packages start at ₹1,499 and include full setup — a trained decorator arrives at your home with all the material and finishes in one to two hours, before your guests reach."
+  },
+  {
+    "id": 4,
+    "question": "Can I send gifts to another city in India?",
+    "answer": "Yes. Fresh items like cakes and flowers are delivered by our local teams in 100+ cities. Courier-shipped gifts like personalised items and hampers reach most pincodes in India — enter your pincode on the product page to check delivery to your exact address."
+  },
+  {
+    "id": 5,
+    "question": "Can I personalise my gift?",
+    "answer": "Yes. You can add names, photos, and messages to mugs, cushions, photo frames, t-shirts, and keychains. Decoration packages can also be customised with balloon colours, themes, and add-ons like cakes and LED name lights."
+  },
+  {
+    "id": 6,
+    "question": "Are the cakes and flowers fresh?",
+    "answer": "Always. Flowers are sourced locally in the delivery city and arranged on the day of delivery. Cakes are baked fresh for your order, with eggless options available in almost every flavour."
+  },
+  {
+    "id": 7,
+    "question": "How do I track my order?",
+    "answer": "You get order updates on WhatsApp, and you can see live status anytime in the My Orders section of your account. Courier-shipped gifts include shipment tracking from dispatch to delivery."
+  },
+  {
+    "id": 8,
+    "question": "What if I need to cancel my order?",
+    "answer": "Gifts and products cannot be cancelled once the order is placed. Decorations cannot be cancelled on the day of the event or within 24 hours of it; more than 24 hours before, a flat 25% of the order value is charged as a cancellation fee. If Giftlaya fails to deliver, you get a full refund. The full details are in our cancellation and refund policy."
+  }
+]

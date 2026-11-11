@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: #9b1b45;
+  --color-brand-50: #fdf2f5;
+  --color-brand-100: #fce4eb;
+  --color-brand-200: #f8c2d2;
+  --color-brand-300: #f191ac;
+  --color-brand-400: #e15c84;
+  --color-brand-500: #c13866;
+  --color-brand-600: #9b1b45;
+  --color-brand-700: #7d1538;
+  --color-brand-800: #63102c;
+  --color-brand-900: #4a0c21;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #111827;
+  background-color: #ffffff;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar hide utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Exact Giftlaya Tile Track & Tile Grid responsive formulas */
+.giftlaya-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--m, 3), minmax(0, 1fr));
+  gap: 18px 12px;
+}
+
+@media (min-width: 640px) {
+  .giftlaya-tile-grid {
+    grid-template-columns: repeat(var(--d, 6), minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+}
+
+.giftlaya-tile-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 3px 2px 6px;
+  margin: -3px -2px -6px;
+}
+
+.giftlaya-tile-track::-webkit-scrollbar {
+  display: none;
+}
+
+.giftlaya-tile-track > * {
+  flex: 0 0 calc((100% - (var(--m, 4) - 1) * 12px) / var(--m, 4));
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .giftlaya-tile-track {
+    gap: 16px;
+  }
+  .giftlaya-tile-track > * {
+    flex-basis: calc((100% - (var(--d, 8) - 1) * 16px) / var(--d, 8));
+  }
+}
+
+/* Custom smooth transitions */
+button, a {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+/* Dialog backdrops */
+dialog::backdrop {
+  background: rgba(31, 20, 29, 0.45);
+  backdrop-filter: blur(2px);
+}

@@ -1,0 +1,154 @@
+{
+  "popularCities": [
+    {
+      "name": "Ahmedabad",
+      "slug": "ahmedabad",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Bangalore",
+      "slug": "bangalore",
+      "state": "Karnataka"
+    },
+    {
+      "name": "Chennai",
+      "slug": "chennai",
+      "state": "Tamil Nadu"
+    },
+    {
+      "name": "Delhi",
+      "slug": "delhi",
+      "state": "Delhi NCR"
+    },
+    {
+      "name": "Gandhinagar",
+      "slug": "gandhinagar",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Gurgaon",
+      "slug": "gurgaon",
+      "state": "Haryana"
+    },
+    {
+      "name": "Kolkata",
+      "slug": "kolkata",
+      "state": "West Bengal"
+    },
+    {
+      "name": "Mumbai",
+      "slug": "mumbai",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Navi Mumbai",
+      "slug": "navi-mumbai",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Pune",
+      "slug": "pune",
+      "state": "Maharashtra"
+    },
+    {
+      "name": "Surat",
+      "slug": "surat",
+      "state": "Gujarat"
+    },
+    {
+      "name": "Visakhapatnam",
+      "slug": "visakhapatnam",
+      "state": "Andhra Pradesh"
+    }
+  ],
+  "allCities": [
+    "Agra",
+    "Ahmedabad",
+    "Ajmer",
+    "Aligarh",
+    "Ambala",
+    "Amravati",
+    "Amritsar",
+    "Andheri West Mumbai",
+    "Asansol",
+    "Aurangabad",
+    "Bangalore",
+    "Bareilly",
+    "Bhilai",
+    "Bhiwandi",
+    "Bhopal",
+    "Bhubaneswar",
+    "Bikaner",
+    "Bilaspur",
+    "Chandigarh",
+    "Chennai",
+    "Coimbatore",
+    "Cuttack",
+    "Dehradun",
+    "Delhi",
+    "Dhanbad",
+    "Durgapur",
+    "Faridabad",
+    "Firozabad",
+    "Gandhinagar",
+    "Ghaziabad",
+    "Gorakhpur",
+    "Gurgaon",
+    "Guwahati",
+    "Gwalior",
+    "Haridwar",
+    "Howrah",
+    "Hyderabad",
+    "Indore",
+    "Jabalpur",
+    "Jaipur",
+    "Jalandhar",
+    "Jammu",
+    "Jamnagar",
+    "Jamshedpur",
+    "Jhansi",
+    "Jodhpur",
+    "Kalyan-Dombivali",
+    "Kanpur",
+    "Kolhapur",
+    "Kolkata",
+    "Kota",
+    "Lonavala",
+    "Lucknow",
+    "Ludhiana",
+    "Mathura",
+    "Meerut",
+    "Moradabad",
+    "Mumbai",
+    "Nagpur",
+    "Nashik",
+    "Navi Mumbai",
+    "Noida",
+    "Others",
+    "Panipat",
+    "Patiala",
+    "Patna",
+    "Pimpri-Chinchwad",
+    "Prayagraj",
+    "Pune",
+    "Raipur",
+    "Rajkot",
+    "Ranchi",
+    "Rohtak",
+    "Rourkela",
+    "Saharanpur",
+    "Secunderabad",
+    "Shimla",
+    "Siliguri",
+    "Solapur",
+    "Srinagar",
+    "Surat",
+    "Thane",
+    "Udaipur",
+    "Ujjain",
+    "Vadodara",
+    "Varanasi",
+    "Vasai-Virar",
+    "Visakhapatnam"
+  ]
+}

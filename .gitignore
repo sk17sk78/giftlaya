@@ -1,0 +1,24 @@
+# Dependencies & build artifacts
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/tsconfig.tsbuildinfo
+api/bin/
+api/tmp/
+**/*.exe
+**/*.test
+
+# Local workspace & OS files
+go.work
+go.work.sum
+.DS_Store
+**/*.log
+
+# Environment secrets (keep .env.example)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example

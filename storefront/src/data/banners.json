@@ -1,0 +1,24 @@
+{
+  "heroBanners": [
+    {
+      "id": 1,
+      "href": "/flowers",
+      "label": "Explore flowers",
+      "desktopImage": "https://cdn.giftlaya.com/images/93/37c19bef-5865-4e3c-8293-b2c92d5a4913.webp",
+      "mobileImage": "https://cdn.giftlaya.com/images/93/240db990-f274-42f4-820e-8c53ff548b22.webp"
+    },
+    {
+      "id": 2,
+      "href": "/gifts",
+      "label": "Explore gifts",
+      "desktopImage": "https://cdn.giftlaya.com/images/93/cf778e6a-a2a9-4236-8a16-03394591aa67.webp",
+      "mobileImage": "https://cdn.giftlaya.com/images/93/240db990-f274-42f4-820e-8c53ff548b22.webp"
+    }
+  ],
+  "corporateBanner": {
+    "href": "/corporate-gift",
+    "label": "Explore corporate gift",
+    "desktopImage": "https://cdn.giftlaya.com/images/93/340236a1-9cdf-40b2-9d0e-c2a1d8072cd0.webp",
+    "mobileImage": "https://cdn.giftlaya.com/images/93/355ed3a5-cf6a-4c83-98f1-2db49a0a48db.webp"
+  }
+}

@@ -1,0 +1,84 @@
+"use client";
+
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
+interface SeoGuideProps {
+  title?: string;
+  html?: string;
+}
+
+const DEFAULT_SEO_TITLE = "More about gifting with Giftlaya";
+const DEFAULT_SEO_HTML = "<div class=\"seo-content\"><h1>Online Gift Delivery in India, Without the Stress</h1>\n<p>Sending a gift should take five minutes, not five phone calls. Giftlaya is an online gift delivery platform that brings everything under one roof — fresh flowers, cakes, plants, chocolates, personalised gifts, and complete balloon decoration at home. We deliver across 100+ cities in India, and you choose how: same day, midnight, or on a date you pick in advance.</p>\n<p>More than 2 lakh customers have used Giftlaya for birthdays, anniversaries, baby showers, festivals, and the small ordinary days that deserve something sweet. The promise is simple. Your order reaches on time, and it looks like the photo you saw when you booked it.</p>\n\n<h2>What You Can Order on Giftlaya</h2>\n\n<h3>Fresh Flowers, Delivered the Same Day</h3>\n<p>Our <a href=\"/flowers\">flower delivery</a> starts at ₹449. Every bouquet is sourced locally in the delivery city and arranged on the day it goes out, so <a href=\"/roses\">roses</a>, <a href=\"/lily\">lilies</a>, <a href=\"/orchids\">orchids</a>, and <a href=\"/mixed-flowers\">mixed bouquets</a> arrive fresh, not tired from travel. Order flowers online in <a href=\"/flowers/delhi\">Delhi</a>, <a href=\"/flowers/mumbai\">Mumbai</a>, <a href=\"/flowers/pune\">Pune</a>, <a href=\"/flowers/kolkata\">Kolkata</a>, and most major cities — including midnight delivery for the anniversary you almost forgot.</p>\n<p>Not sure which flower to send? Red roses are the safe answer for love — anniversaries, Valentine's Day, or no reason at all. Pink roses and <a href=\"/carnations\">carnations</a> suit mothers, sisters, and teachers. Yellow roses and <a href=\"/gerberas\">gerberas</a> say congratulations without saying too much. White flowers carry sympathy and respect. When in doubt, a mixed bouquet covers every base.</p>\n\n<h3>Cake Delivery for Every Celebration</h3>\n<p>Online <a href=\"/cakes\">cake delivery</a> starts at ₹649. Chocolate truffle, red velvet, butterscotch, black forest, photo cakes, and eggless options for every flavour. If you want something more special, browse <a href=\"/theme-cakes\">theme cakes</a> for kids' parties, cute little <a href=\"/bento-cakes\">bento cakes</a> for small celebrations, or <a href=\"/1st-birthday-cakes\">first birthday cakes</a> for the biggest little milestone. Midnight cake delivery is available in major cities, because a birthday starts at 12 AM, not at breakfast.</p>\n<p>A quick sizing guide from experience: half a kilo serves four to six people, one kilo serves eight to twelve, and for a party of twenty or more, go for two kilos or a tiered theme cake. Ordering for someone who avoids eggs? Almost every flavour on Giftlaya has an eggless version at the same price.</p>\n\n<h3>Balloon Decoration at Home</h3>\n<p>This is what most first-time customers come for. Our <a href=\"/balloon-decorations\">balloon decoration</a> packages start at ₹1,499, and the price includes the setup — a trained decorator comes to your home with all the material and finishes the job in one to two hours, before your guests arrive. Popular setups include <a href=\"/birthday-decoration\">birthday decoration</a>, <a href=\"/anniversary-decoration\">anniversary decoration</a>, <a href=\"/baby-welcome-decoration\">baby welcome decoration</a>, <a href=\"/romantic-decoration\">romantic room decoration</a>, and <a href=\"/candle-light-dinner\">candle light dinner</a> experiences.</p>\n<p>Here is how a booking actually goes. You choose the package, pick your date and a time slot, and pay online. Our team calls or messages to confirm the address and any customisation — balloon colours, a name banner, the age number for a birthday. On the day, the decorator arrives in your chosen slot, sets everything up, takes your approval, and leaves before the surprise begins. If you are planning a <a href=\"/baby-shower-decoration\">baby shower</a> or a <a href=\"/proposal-decoration\">proposal</a>, book two to three days ahead — those setups take the most requests for customisation.</p>\n\n<h3>Personalised Gifts They Will Actually Keep</h3>\n<p>A gift with a name or a photo on it rarely gets regifted. Add a photograph to <a href=\"/personalized-mugs\">personalised mugs</a>, <a href=\"/personalized-cushions\">photo cushions</a>, or <a href=\"/personalised-photo-frames\">photo frames</a>. Print a name on <a href=\"/custom-t-shirts\">custom t-shirts</a> or <a href=\"/personalised-keychains\">keychains</a>. Or turn a couple's photo into a hand-drawn style <a href=\"/personalized-caricatures\">caricature</a> — a favourite for weddings and anniversaries.</p>\n\n<h3>Plants, Chocolates, and Gift Hampers</h3>\n<p>For gifts that last longer than a weekend, send <a href=\"/plants\">indoor plants</a> from ₹499 — money plants, snake plants, and lucky bamboo that survive busy owners. <a href=\"/chocolates\">Chocolate gift packs</a> work for every age and every festival. And when one gift is not enough, <a href=\"/gift-hampers\">gift hampers</a> combine sweets, snacks, and keepsakes in one box — also a practical option for <a href=\"/corporate-gift\">corporate gifting</a> in bulk.</p>\n\n<h2>Same Day, Midnight, or a Date You Choose</h2>\n<p>Every product page shows the delivery options available for it. Decorations and fresh items like cakes and flowers are delivered by our local teams in 100+ cities, with same-day slots in most of them — order by the afternoon and you can still make tonight's celebration. Courier-shipped gifts — like personalised items and hampers — reach most pincodes in India. Enter your pincode on the product page and we will tell you instantly whether we deliver there and when the order can reach you. Shipped orders come with tracking from dispatch to doorstep, so you are never left guessing where the gift is.</p>\n<p>Planning ahead? You can schedule any order for a future date at checkout. Most customers book decorations two to three days early and same-day items on the day itself. For peak dates — Valentine's week, Mother's Day, Raksha Bandhan, New Year's Eve — booking early gets you the time slot you actually want.</p>\n\n<h2>Gifting Across India's Cities</h2>\n<p>Giftlaya's local teams handle fresh deliveries and decoration setups city by city. <a href=\"/birthday-decoration/delhi\">Birthday decoration in Delhi</a>, <a href=\"/birthday-decoration/mumbai\">Mumbai</a>, <a href=\"/birthday-decoration/bangalore\">Bangalore</a>, and <a href=\"/birthday-decoration/kolkata\">Kolkata</a> are our busiest services, alongside flower delivery in <a href=\"/flowers/hyderabad\">Hyderabad</a>, <a href=\"/flowers/gurgaon\">Gurgaon</a>, and <a href=\"/flowers/noida\">Noida</a>. Living away from family is normal now — a son in Bangalore can have a cake and decoration ready at his parents' home in Kolkata without making a single phone call. That distance-closing is most of what we do every day.</p>\n\n<h2>Why Families Keep Coming Back</h2>\n<p>Giftlaya is run from Kolkata, with delivery and decoration teams across India. A few honest reasons customers stay with us:</p>\n<ul>\n<li><strong>On-time record.</strong> Celebration gifts are useless a day late. Our whole operation is built around the delivery slot you choose.</li>\n<li><strong>Real humans on support.</strong> WhatsApp and phone support before, during, and after delivery — not a chatbot loop.</li>\n<li><strong>Secure payments.</strong> Pay by UPI, card, or netbanking through a trusted payment gateway. No hidden charges at checkout.</li>\n<li><strong>Reward coins.</strong> Earn 10% back on every order as coins you can use on your next one.</li>\n<li><strong>Clear policies.</strong> Our <a href=\"/pages/cancellation-and-return\">cancellation and refund policy</a> is published openly, so you know the rules before you book.</li>\n</ul>\n\n<h2>How Ordering Works</h2>\n<p>Three steps, five minutes:</p>\n<ul>\n<li><strong>Pick your city.</strong> Prices and same-day availability are shown for your location.</li>\n<li><strong>Choose the product and slot.</strong> Select the date, time slot, flavour, colour theme, or photo upload — whatever the product needs.</li>\n<li><strong>Pay securely and relax.</strong> You get confirmation right away, updates on WhatsApp, and live status in the My Orders section of your account.</li>\n</ul>\n\n<h2>Gift Ideas by Person</h2>\n<p>Stuck on what to get? Start with who it is for. For your wife: <a href=\"/birthday-decoration/for-wife\">a surprise room decoration</a> with her favourite flowers beats another handbag. For your husband: <a href=\"/birthday-decoration/for-husband\">a birthday setup</a> he would never plan for himself, plus a photo caricature of the two of you. For kids: <a href=\"/decoration-for-kids\">theme decorations</a> and <a href=\"/theme-cakes\">cartoon cakes</a> — pick the character, we do the rest. For parents living in another city: fresh flowers, a soft cake, and a video call while they cut it. For colleagues and clients: <a href=\"/corporate-gift\">corporate hampers</a> ordered in bulk with your company's branding.</p>\n\n<h2>A Gift for Every Date on the Calendar</h2>\n<p>Birthdays and anniversaries fill most of our calendar, but not all of it. Around February, <a href=\"/valentines-day\">Valentine's Day gifts</a> and <a href=\"/proposal-decoration\">proposal decorations</a> take over. In monsoon, <a href=\"/rakhi-gifts\">Rakhi gifts</a> travel to brothers and sisters across the country. Wedding season brings <a href=\"/haldi-decoration\">haldi</a> and <a href=\"/mehndi-decoration\">mehndi decorations</a>, and December runs on <a href=\"/festival-decorations\">festival decorations</a> and year-end office parties. Whatever the date, someone has probably ordered for it here before you — and we know exactly how to deliver it.</p>\n<p>Gifting starts here. Pick a city, pick a moment, and let Giftlaya handle the rest.</p></div>";
+
+export function SeoGuide({ title, html }: SeoGuideProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const resolvedTitle = title?.trim() || DEFAULT_SEO_TITLE;
+  const resolvedHtml = html?.trim() || DEFAULT_SEO_HTML;
+
+  return (
+    <section className="min-w-0" aria-label={resolvedTitle}>
+      <details
+        open={isOpen}
+        onToggle={(e) => setIsOpen((e.target as HTMLDetailsElement).open)}
+        className="group border border-[#ebe5ed] rounded-2xl bg-white overflow-hidden transition-all duration-200"
+      >
+        <summary className="flex items-center justify-between p-4 sm:p-5 text-sm sm:text-base font-bold text-[#29232a] cursor-pointer hover:bg-[#fcf2f6]/50 select-none list-none [&::-webkit-details-marker]:hidden">
+          <span>{resolvedTitle}</span>
+          <ChevronDown
+            className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+              isOpen ? "rotate-180 text-brand" : ""
+            }`}
+          />
+        </summary>
+
+        <div className="px-5 pb-6 pt-2 border-t border-[#f0e8ed] text-xs sm:text-[13px] text-[#4a3f4e] leading-relaxed prose prose-sm max-w-none">
+          <style jsx>{`
+            div :global(h1) {
+              font-size: 1.15rem;
+              font-weight: 800;
+              color: #29232a;
+              margin-top: 1rem;
+              margin-bottom: 0.5rem;
+            }
+            div :global(h2) {
+              font-size: 1.05rem;
+              font-weight: 750;
+              color: #29232a;
+              margin-top: 1.25rem;
+              margin-bottom: 0.5rem;
+            }
+            div :global(h3) {
+              font-size: 0.95rem;
+              font-weight: 700;
+              color: #29232a;
+              margin-top: 1rem;
+              margin-bottom: 0.4rem;
+            }
+            div :global(p) {
+              margin-bottom: 0.75rem;
+            }
+            div :global(a) {
+              color: #9b1b45;
+              font-weight: 500;
+              text-decoration: underline;
+              text-underline-offset: 2px;
+            }
+            div :global(a:hover) {
+              color: #7e1538;
+            }
+            div :global(ul) {
+              list-style-type: disc;
+              padding-left: 1.25rem;
+              margin-bottom: 0.75rem;
+            }
+            div :global(li) {
+              margin-bottom: 0.25rem;
+            }
+          `}</style>
+          <div dangerouslySetInnerHTML={{ __html: resolvedHtml }} />
+        </div>
+      </details>
+    </section>
+  );
+}

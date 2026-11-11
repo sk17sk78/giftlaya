@@ -1,0 +1,5269 @@
+basePath: /
+definitions:
+  github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile:
+    properties:
+      created_at:
+        type: string
+      email:
+        type: string
+      full_name:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      last_login_at:
+        type: string
+      role_id:
+        type: integer
+      role_name:
+        type: string
+      role_slug:
+        type: string
+      roles:
+        additionalProperties:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PermissionAccess'
+        type: object
+      seller_id:
+        type: integer
+      superuser:
+        type: boolean
+      totp_enabled:
+        type: boolean
+      username:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.AuditEntry:
+    properties:
+      action:
+        type: string
+      actor_id:
+        type: integer
+      actor_type:
+        type: string
+      actor_username:
+        type: string
+      after_json:
+        items:
+          type: integer
+        type: array
+      before_json:
+        items:
+          type: integer
+        type: array
+      created_at:
+        type: string
+      entity_id:
+        type: string
+      entity_type:
+        type: string
+      id:
+        type: integer
+      ip_address:
+        type: string
+      module:
+        type: string
+      request_id:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.BlackoutDate:
+    properties:
+      blackout_date:
+        description: YYYY-MM-DD
+        type: string
+      block_same_day:
+        type: boolean
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      extra_surge_paise:
+        type: integer
+      id:
+        type: integer
+      reason:
+        type: string
+    required:
+    - blackout_date
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.BlogCategory:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      image_url:
+        type: string
+      name:
+        type: string
+      seo_description:
+        type: string
+      seo_title:
+        type: string
+      slug:
+        type: string
+    required:
+    - name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.BlogPost:
+    properties:
+      author_name:
+        type: string
+      category_id:
+        type: integer
+      category_name:
+        type: string
+      content_html:
+        type: string
+      created_at:
+        type: string
+      excerpt:
+        type: string
+      featured_image_url:
+        type: string
+      id:
+        type: integer
+      is_featured:
+        type: boolean
+      published_at:
+        type: string
+      read_time:
+        type: string
+      sections_json:
+        items:
+          type: object
+        type: array
+      seo_description:
+        type: string
+      seo_title:
+        type: string
+      slug:
+        type: string
+      status:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - title
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.BulkProductUpdateItem:
+    properties:
+      mrp_paise:
+        type: integer
+      product_id:
+        type: integer
+      selling_price_paise:
+        type: integer
+      status:
+        type: string
+      stock_qty:
+        type: integer
+    required:
+    - product_id
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.CMSPage:
+    properties:
+      body_html:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_published:
+        type: boolean
+      page_type:
+        type: string
+      robots_index:
+        type: boolean
+      sections_json:
+        items:
+          type: object
+        type: array
+      seo_description:
+        type: string
+      seo_title:
+        type: string
+      slug:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - slug
+    - title
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Category:
+    properties:
+      children:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+        type: array
+      created_at:
+        type: string
+      id:
+        type: integer
+      image_url:
+        type: string
+      is_active:
+        type: boolean
+      kind:
+        type: string
+      name:
+        type: string
+      parent_id:
+        type: integer
+      product_count:
+        type: integer
+      robots_index:
+        type: boolean
+      seo_content_html:
+        type: string
+      seo_description:
+        type: string
+      seo_title:
+        type: string
+      slug:
+        type: string
+      sort_order:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.City:
+    properties:
+      base_delivery_charge_paise:
+        type: integer
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      is_popular:
+        type: boolean
+      landmark_key:
+        type: string
+      midnight_available:
+        type: boolean
+      name:
+        type: string
+      same_day_cutoff_time:
+        type: string
+      slug:
+        type: string
+      sort_order:
+        type: integer
+      state_id:
+        type: integer
+      state_name:
+        type: string
+    required:
+    - name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.CoinTransaction:
+    properties:
+      admin_user_id:
+        type: integer
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      delta:
+        type: integer
+      expires_at:
+        type: string
+      id:
+        type: integer
+      note:
+        type: string
+      order_id:
+        type: integer
+      tx_type:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ContactInquiry:
+    properties:
+      assigned_admin_id:
+        type: integer
+      city:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      inquiry_type:
+        type: string
+      message:
+        type: string
+      metadata:
+        type: object
+      name:
+        type: string
+      phone:
+        type: string
+      status:
+        type: string
+      subject:
+        type: string
+    required:
+    - name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Coupon:
+    properties:
+      applicable_category_ids:
+        items:
+          type: integer
+        type: array
+      applicable_city_ids:
+        items:
+          type: integer
+        type: array
+      code:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      discount_type:
+        enum:
+        - flat
+        - percent
+        type: string
+      discount_value:
+        minimum: 1
+        type: integer
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      max_discount_paise:
+        type: integer
+      min_cart_paise:
+        type: integer
+      per_user_limit:
+        type: integer
+      total_usage_limit:
+        type: integer
+      used_count:
+        type: integer
+      valid_from:
+        type: string
+      valid_until:
+        type: string
+    required:
+    - code
+    - discount_type
+    - discount_value
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.CreateOrderInput:
+    properties:
+      city_id:
+        type: integer
+      coins_to_redeem:
+        type: integer
+      coupon_code:
+        type: string
+      customer_id:
+        type: integer
+      delivery_date:
+        description: YYYY-MM-DD
+        type: string
+      internal_notes:
+        type: string
+      is_manual:
+        type: boolean
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CreateOrderItemInput'
+        minItems: 1
+        type: array
+      payment_method:
+        enum:
+        - razorpay
+        - cod
+        - payment_link
+        type: string
+      pincode:
+        type: string
+      recipient_name:
+        type: string
+      recipient_phone:
+        type: string
+      shipping_address_json:
+        items:
+          type: integer
+        type: array
+      slot_template_id:
+        type: integer
+    required:
+    - city_id
+    - delivery_date
+    - items
+    - payment_method
+    - recipient_name
+    - recipient_phone
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.CreateOrderItemInput:
+    properties:
+      addon_ids:
+        items:
+          type: integer
+        type: array
+      diet_preference:
+        description: Veg | Non-Veg
+        type: string
+      personalization_json:
+        items:
+          type: integer
+        type: array
+      product_id:
+        type: integer
+      qty:
+        maximum: 100
+        minimum: 1
+        type: integer
+      variant_id:
+        type: integer
+    required:
+    - product_id
+    - qty
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Customer:
+    properties:
+      addresses:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CustomerAddress'
+        type: array
+      coin_history:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CoinTransaction'
+        type: array
+      coins_balance:
+        type: integer
+      created_at:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      is_blocked:
+        type: boolean
+      name:
+        type: string
+      orders_count:
+        type: integer
+      phone:
+        type: string
+      total_spent_paise:
+        type: integer
+      whatsapp_opt_in:
+        type: boolean
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.CustomerAddress:
+    properties:
+      address_line1:
+        type: string
+      address_line2:
+        type: string
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      customer_id:
+        type: integer
+      id:
+        type: integer
+      is_default:
+        type: boolean
+      label:
+        type: string
+      landmark:
+        type: string
+      pincode:
+        type: string
+      recipient_name:
+        type: string
+      recipient_phone:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.DailyRevenuePoint:
+    properties:
+      date:
+        type: string
+      orders:
+        type: integer
+      revenue_paise:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.DashboardStats:
+    properties:
+      low_stock_items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.LowStockItem'
+        type: array
+      revenue_series:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DailyRevenuePoint'
+        type: array
+      status_counts:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.StatusCount'
+        type: array
+      today_orders:
+        type: integer
+      today_revenue_paise:
+        type: integer
+      top_cities:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TopCityStat'
+        type: array
+      top_products:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TopProductStat'
+        type: array
+      total_orders:
+        type: integer
+      total_revenue_paise:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.DecorationInclusion:
+    properties:
+      id:
+        type: integer
+      item_text:
+        type: string
+      kind:
+        description: included | not_included
+        type: string
+      product_id:
+        type: integer
+      sort_order:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.DecoratorTeam:
+    properties:
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      daily_capacity:
+        type: integer
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      name:
+        type: string
+      phone:
+        type: string
+    required:
+    - city_id
+    - name
+    - phone
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.FAQ:
+    properties:
+      answer:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      question:
+        type: string
+      scope_id:
+        type: integer
+      scope_type:
+        type: string
+      sort_order:
+        type: integer
+    required:
+    - answer
+    - question
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.HeroBanner:
+    properties:
+      created_at:
+        type: string
+      desktop_image_url:
+        type: string
+      ends_at:
+        type: string
+      href:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      mobile_image_url:
+        type: string
+      sort_order:
+        type: integer
+      starts_at:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - desktop_image_url
+    - href
+    - title
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.HomepageSection:
+    properties:
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      rule_config_json:
+        type: object
+      section_key:
+        type: string
+      section_type:
+        type: string
+      slider_enabled:
+        type: boolean
+      sort_order:
+        type: integer
+      subtitle:
+        type: string
+      title:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - section_key
+    - section_type
+    - title
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Invoice:
+    properties:
+      generated_at:
+        type: string
+      gst_breakup_json:
+        items:
+          type: integer
+        type: array
+      gstin_seller:
+        type: string
+      id:
+        type: integer
+      invoice_number:
+        type: string
+      order_id:
+        type: integer
+      order_number:
+        type: string
+      pdf_url:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.LowStockItem:
+    properties:
+      name:
+        type: string
+      product_id:
+        type: integer
+      sku:
+        type: string
+      stock_qty:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.MediaAsset:
+    properties:
+      alt_text:
+        type: string
+      cdn_url:
+        type: string
+      created_at:
+        type: string
+      file_key:
+        type: string
+      folder_id:
+        type: integer
+      height:
+        type: integer
+      id:
+        type: integer
+      mime_type:
+        type: string
+      size_bytes:
+        type: integer
+      uploaded_by_admin_id:
+        type: integer
+      webp_url:
+        type: string
+      width:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.MediaFolder:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      parent_id:
+        type: integer
+      slug:
+        type: string
+    required:
+    - name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.MetaAdsCampaign:
+    properties:
+      daily_budget_paise:
+        type: integer
+      external_campaign_id:
+        type: string
+      id:
+        type: integer
+      metrics_json:
+        type: object
+      name:
+        type: string
+      objective:
+        type: string
+      rules_json:
+        type: object
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem:
+    properties:
+      badge:
+        type: string
+      category_id:
+        type: integer
+      children:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+        type: array
+      column_title:
+        type: string
+      href:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      label:
+        type: string
+      parent_id:
+        type: integer
+      sort_order:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.NotificationTemplate:
+    properties:
+      body_template:
+        type: string
+      channel:
+        enum:
+        - email
+        - whatsapp
+        - sms
+        - push
+        type: string
+      event_key:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      subject:
+        type: string
+      updated_at:
+        type: string
+    required:
+    - body_template
+    - channel
+    - event_key
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Order:
+    properties:
+      assignments:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.OrderAssignment'
+        type: array
+      cancellation_fee_paise:
+        type: integer
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      coins_discount_paise:
+        type: integer
+      coins_redeemed:
+        type: integer
+      coupon_code:
+        type: string
+      coupon_discount_paise:
+        type: integer
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      delivery_date:
+        type: string
+      delivery_fee_paise:
+        type: integer
+      history:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.OrderStatusHistoryEntry'
+        type: array
+      id:
+        type: integer
+      internal_notes:
+        type: string
+      is_manual:
+        type: boolean
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.OrderItem'
+        type: array
+      order_number:
+        type: string
+      payment_method:
+        type: string
+      payment_status:
+        type: string
+      placed_at:
+        type: string
+      recipient_name:
+        type: string
+      recipient_phone:
+        type: string
+      shipping_address_json:
+        items:
+          type: integer
+        type: array
+      slot_label:
+        type: string
+      slot_surcharge_paise:
+        type: integer
+      slot_template_id:
+        type: integer
+      status:
+        type: string
+      subtotal_paise:
+        type: integer
+      tax_gst_paise:
+        type: integer
+      total_paise:
+        type: integer
+      tracking_id:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.OrderAssignment:
+    properties:
+      assigned_at:
+        type: string
+      assigned_by_admin_id:
+        type: integer
+      decorator_team_id:
+        type: integer
+      delivery_partner_name:
+        type: string
+      delivery_partner_phone:
+        type: string
+      id:
+        type: integer
+      order_id:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.OrderItem:
+    properties:
+      addons_json:
+        items:
+          type: integer
+        type: array
+      commission_percent:
+        type: number
+      id:
+        type: integer
+      item_type:
+        type: string
+      line_total_paise:
+        type: integer
+      order_id:
+        type: integer
+      personalization_json:
+        items:
+          type: integer
+        type: array
+      product_id:
+        type: integer
+      product_title:
+        type: string
+      qty:
+        type: integer
+      seller_id:
+        type: integer
+      seller_payout_paise:
+        type: integer
+      sku_snapshot:
+        type: string
+      unit_price_paise:
+        type: integer
+      variant_id:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.OrderStatusHistoryEntry:
+    properties:
+      actor_id:
+        type: integer
+      actor_type:
+        type: string
+      created_at:
+        type: string
+      from_status:
+        type: string
+      id:
+        type: integer
+      order_id:
+        type: integer
+      reason:
+        type: string
+      to_status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.OrderUploadEntry:
+    properties:
+      delivery_date:
+        type: string
+      item_id:
+        type: integer
+      order_id:
+        type: integer
+      order_number:
+        type: string
+      personalization_json:
+        type: object
+      placed_at:
+        type: string
+      product_id:
+        type: integer
+      product_title:
+        type: string
+      recipient_name:
+        type: string
+      recipient_phone:
+        type: string
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.PaymentLink:
+    properties:
+      amount_paise:
+        type: integer
+      created_at:
+        type: string
+      created_by_admin_id:
+        type: integer
+      customer_phone:
+        type: string
+      expires_at:
+        type: string
+      id:
+        type: integer
+      order_id:
+        type: integer
+      short_url:
+        type: string
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.PaymentTransaction:
+    properties:
+      amount_paise:
+        type: integer
+      created_at:
+        type: string
+      gateway:
+        type: string
+      gateway_event_id:
+        type: string
+      gateway_order_id:
+        type: string
+      gateway_payment_id:
+        type: string
+      id:
+        type: integer
+      idempotency_key:
+        type: string
+      order_id:
+        type: integer
+      order_number:
+        type: string
+      raw_payload:
+        type: object
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Permission:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      label:
+        type: string
+      module_key:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.PermissionAccess:
+    properties:
+      read:
+        type: boolean
+      write:
+        type: boolean
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.PersonalizationField:
+    properties:
+      extra_price_paise:
+        type: integer
+      field_key:
+        type: string
+      field_type:
+        type: string
+      id:
+        type: integer
+      is_required:
+        type: boolean
+      label:
+        type: string
+      options_json:
+        items:
+          type: integer
+        type: array
+      placeholder:
+        type: string
+      product_id:
+        type: integer
+      sort_order:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Pincode:
+    properties:
+      area_name:
+        type: string
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      code:
+        maxLength: 10
+        minLength: 4
+        type: string
+      created_at:
+        type: string
+      extra_charge_paise:
+        type: integer
+      id:
+        type: integer
+      is_express_available:
+        type: boolean
+      is_serviceable:
+        type: boolean
+    required:
+    - city_id
+    - code
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Preset:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      metadata:
+        type: object
+      name:
+        type: string
+      preset_type:
+        type: string
+      slug:
+        type: string
+      sort_order:
+        type: integer
+    required:
+    - name
+    - preset_type
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Product:
+    properties:
+      addon_ids:
+        items:
+          type: integer
+        type: array
+      available_all_cities:
+        type: boolean
+      category_ids:
+        items:
+          type: integer
+        type: array
+      city_overrides:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductCityOverride'
+        type: array
+      created_at:
+        type: string
+      cutoff_time:
+        type: string
+      decoration_inclusions:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DecorationInclusion'
+        type: array
+      delivery_type_id:
+        type: integer
+      delivery_type_slug:
+        type: string
+      description:
+        type: string
+      discount_percent:
+        type: integer
+      gst_rate_percent:
+        type: number
+      has_veg_nonveg:
+        type: boolean
+      id:
+        type: integer
+      images:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductImage'
+        type: array
+      is_eggless:
+        type: boolean
+      is_featured:
+        type: boolean
+      is_trending:
+        type: boolean
+      lead_time_days:
+        type: integer
+      mrp_paise:
+        type: integer
+      name:
+        type: string
+      nonveg_delta_paise:
+        type: integer
+      option_groups:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductOptionGroup'
+        type: array
+      personalization_fields:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PersonalizationField'
+        type: array
+      preset_ids:
+        items:
+          type: integer
+        type: array
+      primary_image_url:
+        type: string
+      product_type:
+        type: string
+      rating_avg:
+        type: number
+      ratings_count:
+        type: integer
+      seller_id:
+        type: integer
+      selling_price_paise:
+        type: integer
+      seo_description:
+        type: string
+      seo_title:
+        type: string
+      sku:
+        type: string
+      slug:
+        type: string
+      status:
+        type: string
+      stock_qty:
+        type: integer
+      track_stock:
+        type: boolean
+      updated_at:
+        type: string
+      variants:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductVariant'
+        type: array
+      veg_delta_paise:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon:
+    properties:
+      addon_category_id:
+        type: integer
+      created_at:
+        type: string
+      id:
+        type: integer
+      image_url:
+        type: string
+      is_active:
+        type: boolean
+      name:
+        type: string
+      price_paise:
+        type: integer
+      slug:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ProductCityOverride:
+    properties:
+      city_id:
+        type: integer
+      cutoff_override:
+        type: string
+      delivery_charge_paise:
+        type: integer
+      is_available:
+        type: boolean
+      price_override_paise:
+        type: integer
+      product_id:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ProductImage:
+    properties:
+      alt_text:
+        type: string
+      id:
+        type: integer
+      is_primary:
+        type: boolean
+      media_id:
+        type: integer
+      product_id:
+        type: integer
+      sort_order:
+        type: integer
+      url:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ProductOptionGroup:
+    properties:
+      id:
+        type: integer
+      is_required:
+        type: boolean
+      name:
+        type: string
+      options_json:
+        items:
+          type: integer
+        type: array
+      product_id:
+        type: integer
+      selection_type:
+        type: string
+      sort_order:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.ProductVariant:
+    properties:
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      label:
+        type: string
+      mrp_paise:
+        type: integer
+      price_paise:
+        type: integer
+      product_id:
+        type: integer
+      sku_suffix:
+        type: string
+      sort_order:
+        type: integer
+      stock_qty:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.RecentWork:
+    properties:
+      category_slug:
+        type: string
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      image_url:
+        type: string
+      is_published:
+        type: boolean
+      sort_order:
+        type: integer
+      title:
+        type: string
+    required:
+    - image_url
+    - title
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Refund:
+    properties:
+      amount_paise:
+        type: integer
+      cancellation_fee_paise:
+        type: integer
+      created_at:
+        type: string
+      gateway_refund_id:
+        type: string
+      id:
+        type: integer
+      idempotency_key:
+        type: string
+      order_id:
+        type: integer
+      order_number:
+        type: string
+      payment_transaction_id:
+        type: integer
+      processed_by_admin_id:
+        type: integer
+      reason:
+        type: string
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Review:
+    properties:
+      admin_reply:
+        type: string
+      category_id:
+        type: integer
+      city_name:
+        type: string
+      comment:
+        type: string
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      id:
+        type: integer
+      is_featured_home:
+        type: boolean
+      product_id:
+        type: integer
+      product_name:
+        type: string
+      rating:
+        maximum: 5
+        minimum: 1
+        type: integer
+      reviewer_name:
+        type: string
+      status:
+        type: string
+    required:
+    - comment
+    - rating
+    - reviewer_name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SEORedirect:
+    properties:
+      created_at:
+        type: string
+      from_path:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      status_code:
+        type: integer
+      to_path:
+        type: string
+    required:
+    - from_path
+    - to_path
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.Seller:
+    properties:
+      bank_details_json:
+        type: object
+      business_name:
+        type: string
+      city_id:
+        type: integer
+      city_name:
+        type: string
+      commission_percent:
+        type: number
+      contact_name:
+        type: string
+      created_at:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      kyc_docs_json:
+        type: object
+      kyc_status:
+        type: string
+      phone:
+        type: string
+      slug:
+        type: string
+    required:
+    - business_name
+    - contact_name
+    - email
+    - phone
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SellerPayout:
+    properties:
+      commission_paise:
+        type: integer
+      created_at:
+        type: string
+      created_by_admin_id:
+        type: integer
+      gross_paise:
+        type: integer
+      id:
+        type: integer
+      net_payout_paise:
+        type: integer
+      paid_at:
+        type: string
+      period_end:
+        type: string
+      period_start:
+        type: string
+      seller_id:
+        type: integer
+      seller_name:
+        type: string
+      status:
+        type: string
+      utr_number:
+        type: string
+    required:
+    - period_end
+    - period_start
+    - seller_id
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SettlementReport:
+    properties:
+      cancel_fees_retained_paise:
+        type: integer
+      captured_count:
+        type: integer
+      from:
+        type: string
+      gross_captured_paise:
+        type: integer
+      net_settlement_paise:
+        type: integer
+      refund_count:
+        type: integer
+      to:
+        type: string
+      total_gst_paise:
+        type: integer
+      total_refunded_paise:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SidebarCounts:
+    properties:
+      contact:
+        properties:
+          new:
+            type: integer
+          total:
+            type: integer
+        type: object
+      customers:
+        type: integer
+      orders:
+        properties:
+          cancelled:
+            type: integer
+          delivered:
+            type: integer
+          failed:
+            type: integer
+          new:
+            type: integer
+          processing:
+            type: integer
+          total:
+            type: integer
+        type: object
+      productInquiry:
+        properties:
+          new:
+            type: integer
+          total:
+            type: integer
+        type: object
+      sellers:
+        properties:
+          payouts:
+            type: integer
+          products:
+            type: integer
+          requests:
+            type: integer
+          tickets:
+            type: integer
+        type: object
+      support:
+        properties:
+          open:
+            type: integer
+          total:
+            type: integer
+        type: object
+      whatsapp:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SiteSetting:
+    properties:
+      group_name:
+        type: string
+      key:
+        type: string
+      updated_at:
+        type: string
+      updated_by_admin_id:
+        type: integer
+      value_json:
+        type: object
+    required:
+    - key
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SlotCapacityOverride:
+    properties:
+      city_id:
+        type: integer
+      id:
+        type: integer
+      is_blocked:
+        type: boolean
+      max_capacity:
+        type: integer
+      reserved_count:
+        type: integer
+      service_date:
+        description: YYYY-MM-DD
+        type: string
+      slot_label:
+        type: string
+      slot_template_id:
+        type: integer
+    required:
+    - city_id
+    - service_date
+    - slot_template_id
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.State:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      name:
+        type: string
+      slug:
+        type: string
+    required:
+    - name
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.StatusCount:
+    properties:
+      count:
+        type: integer
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.SupportTicket:
+    properties:
+      created_at:
+        type: string
+      customer_id:
+        type: integer
+      id:
+        type: integer
+      messages_json:
+        items:
+          type: object
+        type: array
+      order_id:
+        type: integer
+      priority:
+        type: string
+      seller_id:
+        type: integer
+      source_type:
+        type: string
+      status:
+        type: string
+      subject:
+        type: string
+      ticket_number:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.TimeSlotTemplate:
+    properties:
+      default_capacity:
+        type: integer
+      end_time:
+        description: HH:MM
+        type: string
+      extra_charge_paise:
+        type: integer
+      id:
+        type: integer
+      is_active:
+        type: boolean
+      is_midnight:
+        type: boolean
+      label:
+        type: string
+      sort_order:
+        type: integer
+      start_time:
+        description: HH:MM
+        type: string
+    required:
+    - end_time
+    - label
+    - start_time
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.TokenPair:
+    properties:
+      access_token:
+        type: string
+      expires_in:
+        type: integer
+      refresh_token:
+        type: string
+      token_type:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.TopCityStat:
+    properties:
+      city_id:
+        type: integer
+      name:
+        type: string
+      orders:
+        type: integer
+      revenue_paise:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.TopProductStat:
+    properties:
+      product_id:
+        type: integer
+      revenue_paise:
+        type: integer
+      sku:
+        type: string
+      title:
+        type: string
+      units_sold:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.WhatsappContact:
+    properties:
+      customer_id:
+        type: integer
+      id:
+        type: integer
+      last_message_at:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      unread_count:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_domain.WhatsappMessage:
+    properties:
+      body:
+        type: string
+      contact_id:
+        type: integer
+      created_at:
+        type: string
+      direction:
+        type: string
+      id:
+        type: integer
+      media_url:
+        type: string
+      status:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse:
+    properties:
+      error:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse:
+    properties:
+      message:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      total:
+        type: integer
+      total_pages:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.CSVImportSummary:
+    properties:
+      errors:
+        items:
+          type: string
+        type: array
+      imported:
+        type: integer
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.CreateUserInput:
+    properties:
+      access_code:
+        maxLength: 20
+        minLength: 4
+        type: string
+      email:
+        type: string
+      full_name:
+        type: string
+      is_active:
+        type: boolean
+      is_superuser:
+        type: boolean
+      password:
+        minLength: 8
+        type: string
+      role_id:
+        type: integer
+      seller_id:
+        type: integer
+      username:
+        maxLength: 80
+        minLength: 3
+        type: string
+    required:
+    - access_code
+    - email
+    - full_name
+    - password
+    - role_id
+    - username
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.LoginResponse:
+    properties:
+      tokens:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TokenPair'
+      user:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile'
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.RolePermissionInput:
+    properties:
+      can_read:
+        type: boolean
+      can_write:
+        type: boolean
+      permission_id:
+        type: integer
+    required:
+    - permission_id
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.RoleWithPermissions:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_system:
+        type: boolean
+      name:
+        type: string
+      permissions:
+        additionalProperties:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PermissionAccess'
+        type: object
+      slug:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.TOTPSetupResponse:
+    properties:
+      otpauth_url:
+        type: string
+      secret:
+        type: string
+    type: object
+  github_com_giftlaya_giftlaya-api_internal_service.UpdateUserInput:
+    properties:
+      email:
+        type: string
+      full_name:
+        type: string
+      is_active:
+        type: boolean
+      is_superuser:
+        type: boolean
+      role_id:
+        type: integer
+      seller_id:
+        type: integer
+    required:
+    - email
+    - full_name
+    - role_id
+    type: object
+  internal_handler_admin.AddonsListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.AdjustCoinsRequest:
+    properties:
+      delta:
+        type: integer
+      note:
+        type: string
+    required:
+    - delta
+    - note
+    type: object
+  internal_handler_admin.AssignOrderRequest:
+    properties:
+      decorator_team_id:
+        type: integer
+      delivery_partner_name:
+        type: string
+      delivery_partner_phone:
+        type: string
+    type: object
+  internal_handler_admin.AuditListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AuditEntry'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.BlockCustomerRequest:
+    properties:
+      is_blocked:
+        type: boolean
+    type: object
+  internal_handler_admin.BulkProductUpdateRequest:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BulkProductUpdateItem'
+        minItems: 1
+        type: array
+    required:
+    - items
+    type: object
+  internal_handler_admin.ChangePasswordRequest:
+    properties:
+      current_password:
+        type: string
+      new_password:
+        minLength: 8
+        type: string
+    required:
+    - current_password
+    - new_password
+    type: object
+  internal_handler_admin.CustomersListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Customer'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.EnableTOTPRequest:
+    properties:
+      code:
+        type: string
+    required:
+    - code
+    type: object
+  internal_handler_admin.ForgotPasswordRequest:
+    properties:
+      email:
+        type: string
+    required:
+    - email
+    type: object
+  internal_handler_admin.InvoicesListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Invoice'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.LoginRequest:
+    properties:
+      code:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - code
+    - password
+    - username
+    type: object
+  internal_handler_admin.LogoutRequest:
+    properties:
+      refresh_token:
+        type: string
+    type: object
+  internal_handler_admin.MarkPayoutPaidRequest:
+    properties:
+      utr_number:
+        type: string
+    required:
+    - utr_number
+    type: object
+  internal_handler_admin.MediaListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MediaAsset'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.ModerateReviewRequest:
+    properties:
+      admin_reply:
+        type: string
+      is_featured_home:
+        type: boolean
+      status:
+        enum:
+        - pending
+        - approved
+        - rejected
+        type: string
+    required:
+    - status
+    type: object
+  internal_handler_admin.OrderUploadsResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.OrderUploadEntry'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.OrdersListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.PaymentLinksListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PaymentLink'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.PaymentsListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PaymentTransaction'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.PincodesListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Pincode'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.ProductsListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.RefreshRequest:
+    properties:
+      refresh_token:
+        type: string
+    required:
+    - refresh_token
+    type: object
+  internal_handler_admin.RefundsListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Refund'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.ResendNotificationRequest:
+    properties:
+      event:
+        type: string
+    type: object
+  internal_handler_admin.ResetPasswordRequest:
+    properties:
+      new_password:
+        minLength: 8
+        type: string
+      token:
+        type: string
+    required:
+    - new_password
+    - token
+    type: object
+  internal_handler_admin.ReviewsListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Review'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.SellerKYCRequest:
+    properties:
+      commission_percent:
+        type: number
+      kyc_status:
+        enum:
+        - pending
+        - verified
+        - rejected
+        type: string
+    required:
+    - kyc_status
+    type: object
+  internal_handler_admin.TicketReplyRequest:
+    properties:
+      status:
+        type: string
+      text:
+        type: string
+    required:
+    - text
+    type: object
+  internal_handler_admin.UpdateOrderNotesRequest:
+    properties:
+      internal_notes:
+        type: string
+      tracking_id:
+        type: string
+    type: object
+  internal_handler_admin.UpdateOrderStatusRequest:
+    properties:
+      reason:
+        type: string
+      status:
+        enum:
+        - placed
+        - confirmed
+        - assigned
+        - out_for_delivery
+        - delivered
+        - cancelled
+        - refunded
+        type: string
+    required:
+    - status
+    type: object
+  internal_handler_admin.UpdateRolePermissionsRequest:
+    properties:
+      permissions:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.RolePermissionInput'
+        type: array
+    required:
+    - permissions
+    type: object
+  internal_handler_admin.UsersListResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile'
+        type: array
+      meta:
+        $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.PaginatedMeta'
+    type: object
+  internal_handler_admin.WhatsappSendRequest:
+    properties:
+      body:
+        type: string
+    required:
+    - body
+    type: object
+  internal_handler_public.HealthResponse:
+    properties:
+      postgres:
+        type: string
+      redis:
+        type: string
+      status:
+        type: string
+      timestamp:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Go backend API powering both the Giftlaya storefront (/api/v1/public/*)
+    and the standalone Giftlaya CMS v2 admin dashboard (/api/v1/admin/*).
+  title: Giftlaya E-Commerce & Admin CMS API
+  version: "1.0"
+paths:
+  /api/v1/admin/addons:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.AddonsListResponse'
+      security:
+      - BearerAuth: []
+      summary: List product addons
+      tags:
+      - Admin Catalog
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Addon
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon'
+      security:
+      - BearerAuth: []
+      summary: Create a product addon
+      tags:
+      - Admin Catalog
+  /api/v1/admin/addons/{id}:
+    delete:
+      parameters:
+      - description: Addon ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete a product addon
+      tags:
+      - Admin Catalog
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Addon ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Addon
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ProductAddon'
+      security:
+      - BearerAuth: []
+      summary: Update a product addon
+      tags:
+      - Admin Catalog
+  /api/v1/admin/audit-logs:
+    get:
+      parameters:
+      - description: Module filter
+        in: query
+        name: module
+        type: string
+      - description: Actor ID filter
+        in: query
+        name: actor_id
+        type: integer
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.AuditListResponse'
+      security:
+      - BearerAuth: []
+      summary: List immutable admin audit logs
+      tags:
+      - Admin Audit
+  /api/v1/admin/auth/change-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Passwords
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.ChangePasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Change current admin password
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/forgot-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Email
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.ForgotPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      summary: Request admin password reset email
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Authenticates admin user using username, password, and access code
+        or TOTP 2FA (matching live Giftlaya CMS v2)
+      parameters:
+      - description: Admin login credentials
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.LoginResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+        "429":
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+      summary: Admin CMS login
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/logout:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Refresh token to revoke
+        in: body
+        name: payload
+        schema:
+          $ref: '#/definitions/internal_handler_admin.LogoutRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      summary: Logout and revoke refresh token
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/me:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Get current authenticated admin profile and permissions
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/refresh:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Refresh token
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.RefreshRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.LoginResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+      summary: Rotate refresh token
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/reset-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Reset token & new password
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.ResetPasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.ErrorResponse'
+      summary: Reset admin password with token
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/totp/enable:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 6-digit TOTP code
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.EnableTOTPRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Verify and enable TOTP 2FA for current admin
+      tags:
+      - Admin Auth
+  /api/v1/admin/auth/totp/setup:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.TOTPSetupResponse'
+      security:
+      - BearerAuth: []
+      summary: Generate TOTP 2FA secret for current admin
+      tags:
+      - Admin Auth
+  /api/v1/admin/blackout-dates:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlackoutDate'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List blackout and peak surge dates
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Blackout
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlackoutDate'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlackoutDate'
+      security:
+      - BearerAuth: []
+      summary: Add blackout or peak surge date
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/blackout-dates/{id}:
+    delete:
+      parameters:
+      - description: Blackout ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Remove blackout date
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/blog/categories:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogCategory'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List blog categories
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Blog Category
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogCategory'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogCategory'
+      security:
+      - BearerAuth: []
+      summary: Save blog category
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/blog/posts:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogPost'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List blog articles
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Blog Post
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogPost'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.BlogPost'
+      security:
+      - BearerAuth: []
+      summary: Save blog post
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/blog/posts/{id}:
+    delete:
+      parameters:
+      - description: Post ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete blog post
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/categories:
+    get:
+      parameters:
+      - description: category | occasion | seo_page
+        in: query
+        name: kind
+        type: string
+      - description: Search name/slug
+        in: query
+        name: search
+        type: string
+      - default: true
+        description: Return tree structure
+        in: query
+        name: tree
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List categories (nested tree by default, or flat with ?tree=false)
+      tags:
+      - Admin Catalog
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Category
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+      security:
+      - BearerAuth: []
+      summary: Create category or sub-page
+      tags:
+      - Admin Catalog
+  /api/v1/admin/categories/{id}:
+    delete:
+      parameters:
+      - description: Category ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Soft delete category
+      tags:
+      - Admin Catalog
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Category ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Category
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Category'
+      security:
+      - BearerAuth: []
+      summary: Update category
+      tags:
+      - Admin Catalog
+  /api/v1/admin/cities:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.City'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List delivery cities with cutoffs and surge config
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: City
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.City'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.City'
+      security:
+      - BearerAuth: []
+      summary: Create or update delivery city
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/cms-pages:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CMSPage'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List CMS static/policy/dynamic pages
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Page
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CMSPage'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CMSPage'
+      security:
+      - BearerAuth: []
+      summary: Create or update CMS static/dynamic/policy page
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/cms-pages/{id}:
+    delete:
+      parameters:
+      - description: Page ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete CMS page
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/coupons:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Coupon'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List discount coupons
+      tags:
+      - Admin Customers & Coupons
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Coupon
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Coupon'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Coupon'
+      security:
+      - BearerAuth: []
+      summary: Create or update coupon
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/coupons/{id}:
+    delete:
+      parameters:
+      - description: Coupon ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete coupon
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/customers:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.CustomersListResponse'
+      security:
+      - BearerAuth: []
+      summary: List customers with order totals and coin wallet balance
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/customers/{id}:
+    get:
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Customer'
+      security:
+      - BearerAuth: []
+      summary: Get customer profile, saved addresses, and coin ledger history
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/customers/{id}/block:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Block state
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.BlockCustomerRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Block or unblock customer account
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/customers/{id}/coins:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Delta & note
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.AdjustCoinsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: integer
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Manually adjust customer coin wallet with immutable ledger & audit
+        log
+      tags:
+      - Admin Customers & Coupons
+  /api/v1/admin/dashboard/sidebar-counts:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SidebarCounts'
+      security:
+      - BearerAuth: []
+      summary: Get live CMS sidebar badge counters
+      tags:
+      - Admin Dashboard
+  /api/v1/admin/dashboard/stats:
+    get:
+      parameters:
+      - description: Start date (YYYY-MM-DD)
+        in: query
+        name: from
+        type: string
+      - description: End date (YYYY-MM-DD)
+        in: query
+        name: to
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DashboardStats'
+      security:
+      - BearerAuth: []
+      summary: Get dashboard KPIs, status counts, top products, cities, low stock,
+        and revenue series
+      tags:
+      - Admin Dashboard
+  /api/v1/admin/decorator-teams:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DecoratorTeam'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List decorator teams
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Team
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DecoratorTeam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.DecoratorTeam'
+      security:
+      - BearerAuth: []
+      summary: Create or update decorator team
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/faqs:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.FAQ'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List FAQs
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: FAQ
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.FAQ'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.FAQ'
+      security:
+      - BearerAuth: []
+      summary: Save FAQ
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/faqs/{id}:
+    delete:
+      parameters:
+      - description: FAQ ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete FAQ
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/hero-banners:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HeroBanner'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List homepage hero banners
+      tags:
+      - Admin Homepage Builder
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Hero banner
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HeroBanner'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HeroBanner'
+      security:
+      - BearerAuth: []
+      summary: Create or update a hero banner (desktop/mobile images + schedule)
+      tags:
+      - Admin Homepage Builder
+  /api/v1/admin/hero-banners/{id}:
+    delete:
+      parameters:
+      - description: Banner ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete hero banner
+      tags:
+      - Admin Homepage Builder
+  /api/v1/admin/homepage-sections:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HomepageSection'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List homepage builder sections with sort order and slider_enabled toggle
+      tags:
+      - Admin Homepage Builder
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Section
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HomepageSection'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.HomepageSection'
+      security:
+      - BearerAuth: []
+      summary: Create or update homepage builder section (manual picks or rules +
+        slider_enabled)
+      tags:
+      - Admin Homepage Builder
+  /api/v1/admin/homepage-sections/{id}:
+    delete:
+      parameters:
+      - description: Section ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete homepage section
+      tags:
+      - Admin Homepage Builder
+  /api/v1/admin/inquiries:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ContactInquiry'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List contact, callback, product inquiry, franchise & seller requests
+      tags:
+      - Admin Support & Inbox
+  /api/v1/admin/inquiries/{id}/status:
+    put:
+      parameters:
+      - description: Inquiry ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Update inquiry status (new | in_progress | resolved)
+      tags:
+      - Admin Support & Inbox
+  /api/v1/admin/invoices:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.InvoicesListResponse'
+      security:
+      - BearerAuth: []
+      summary: List GST invoices
+      tags:
+      - Admin Orders
+  /api/v1/admin/media:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.MediaListResponse'
+      security:
+      - BearerAuth: []
+      summary: List media assets
+      tags:
+      - Admin Media Library
+  /api/v1/admin/media/{id}:
+    delete:
+      parameters:
+      - description: Media ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete media asset
+      tags:
+      - Admin Media Library
+  /api/v1/admin/media/folders:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MediaFolder'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List media folders
+      tags:
+      - Admin Media Library
+  /api/v1/admin/media/upload:
+    post:
+      consumes:
+      - multipart/form-data
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MediaAsset'
+      security:
+      - BearerAuth: []
+      summary: Upload image asset to local/S3 CDN storage
+      tags:
+      - Admin Media Library
+  /api/v1/admin/meta-ads:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MetaAdsCampaign'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List Meta Ads campaigns
+      tags:
+      - Admin Marketing
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Campaign
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MetaAdsCampaign'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.MetaAdsCampaign'
+      security:
+      - BearerAuth: []
+      summary: Save Meta Ads campaign
+      tags:
+      - Admin Marketing
+  /api/v1/admin/navigation:
+    get:
+      parameters:
+      - default: true
+        description: Tree format
+        in: query
+        name: tree
+        type: boolean
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List mega-menu navigation tree
+      tags:
+      - Admin Catalog
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Navigation item
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+      security:
+      - BearerAuth: []
+      summary: Create mega-menu navigation node
+      tags:
+      - Admin Catalog
+  /api/v1/admin/navigation/{id}:
+    delete:
+      parameters:
+      - description: Nav Item ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete mega-menu navigation node
+      tags:
+      - Admin Catalog
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Nav Item ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Navigation item
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NavigationItem'
+      security:
+      - BearerAuth: []
+      summary: Update mega-menu navigation node
+      tags:
+      - Admin Catalog
+  /api/v1/admin/notification-templates:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NotificationTemplate'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List notification templates
+      tags:
+      - Admin Settings
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Template
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NotificationTemplate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.NotificationTemplate'
+      security:
+      - BearerAuth: []
+      summary: Create or update notification template ({{order_id}}, {{name}}, {{slot}})
+      tags:
+      - Admin Settings
+  /api/v1/admin/orders:
+    get:
+      parameters:
+      - description: placed | confirmed | assigned | out_for_delivery | delivered
+          | cancelled | refunded
+        in: query
+        name: status
+        type: string
+      - description: pending | paid | failed | refunded
+        in: query
+        name: payment_status
+        type: string
+      - description: razorpay | cod | payment_link
+        in: query
+        name: payment_method
+        type: string
+      - description: Delivery type slug
+        in: query
+        name: delivery_type
+        type: string
+      - description: City ID
+        in: query
+        name: city_id
+        type: integer
+      - description: Category ID
+        in: query
+        name: category_id
+        type: integer
+      - description: From YYYY-MM-DD
+        in: query
+        name: date_from
+        type: string
+      - description: To YYYY-MM-DD
+        in: query
+        name: date_to
+        type: string
+      - description: Search order number, phone, or recipient
+        in: query
+        name: search
+        type: string
+      - description: newest | oldest | total_desc | delivery_date
+        in: query
+        name: sort_by
+        type: string
+      - default: 1
+        description: Page
+        in: query
+        name: page
+        type: integer
+      - default: 20
+        description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.OrdersListResponse'
+      security:
+      - BearerAuth: []
+      summary: List and filter orders (status, date range, city, delivery type, payment,
+        search)
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}:
+    get:
+      parameters:
+      - description: Order ID or Order Number
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      security:
+      - BearerAuth: []
+      summary: Get full order detail including items, timeline history, and assignments
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/assign:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Assignment
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.AssignOrderRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      security:
+      - BearerAuth: []
+      summary: Assign decorator team or delivery partner to an order
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/invoice:
+    get:
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Invoice'
+      security:
+      - BearerAuth: []
+      summary: Get or generate GST invoice for an order
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/invoice/pdf:
+    get:
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/pdf
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: file
+      security:
+      - BearerAuth: []
+      summary: Download generated PDF tax invoice for an order
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/notes:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Notes & Tracking
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.UpdateOrderNotesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      security:
+      - BearerAuth: []
+      summary: Update tracking ID and internal admin notes on an order
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/resend-notification:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Optional event override
+        in: body
+        name: payload
+        schema:
+          $ref: '#/definitions/internal_handler_admin.ResendNotificationRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Resend SMS/WhatsApp/Email notification for an order
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/{id}/status:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: New status
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.UpdateOrderStatusRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      security:
+      - BearerAuth: []
+      summary: Update order status using state machine (rejects invalid transitions)
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/calendar:
+    get:
+      parameters:
+      - description: YYYY-MM
+        in: query
+        name: month
+        type: string
+      - description: Optional City ID
+        in: query
+        name: city_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              additionalProperties: true
+              type: object
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List daily booking calendar counts by month (YYYY-MM)
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/export-csv:
+    get:
+      produces:
+      - text/csv
+      responses:
+        "200":
+          description: CSV content
+          schema:
+            type: string
+      security:
+      - BearerAuth: []
+      summary: Export filtered orders to CSV
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/manual:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order input
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CreateOrderInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      security:
+      - BearerAuth: []
+      summary: Create a manual order from Admin CMS (transactional stock + slot FOR
+        UPDATE locking)
+      tags:
+      - Admin Orders
+  /api/v1/admin/orders/uploads:
+    get:
+      parameters:
+      - default: 1
+        description: Page
+        in: query
+        name: page
+        type: integer
+      - default: 25
+        description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.OrderUploadsResponse'
+      security:
+      - BearerAuth: []
+      summary: List customer personalization uploads on orders
+      tags:
+      - Admin Orders
+  /api/v1/admin/payment-links:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.PaymentLinksListResponse'
+      security:
+      - BearerAuth: []
+      summary: List payment links
+      tags:
+      - Admin Orders
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Payment Link
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PaymentLink'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.PaymentLink'
+      security:
+      - BearerAuth: []
+      summary: Create a payment link for manual/phone orders
+      tags:
+      - Admin Orders
+  /api/v1/admin/payments:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.PaymentsListResponse'
+      security:
+      - BearerAuth: []
+      summary: List payment gateway transactions
+      tags:
+      - Admin Payments & Settlement
+  /api/v1/admin/payments/settlement:
+    get:
+      parameters:
+      - description: YYYY-MM-DD
+        in: query
+        name: from
+        type: string
+      - description: YYYY-MM-DD
+        in: query
+        name: to
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SettlementReport'
+      security:
+      - BearerAuth: []
+      summary: Get payment & GST settlement report across a date range
+      tags:
+      - Admin Payments & Settlement
+  /api/v1/admin/permissions:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Permission'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List all RBAC permission modules
+      tags:
+      - Admin RBAC
+  /api/v1/admin/pincodes:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.PincodesListResponse'
+      security:
+      - BearerAuth: []
+      summary: List serviceable pincodes
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Pincode
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Pincode'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Pincode'
+      security:
+      - BearerAuth: []
+      summary: Create or update pincode
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/pincodes/{id}:
+    delete:
+      parameters:
+      - description: Pincode ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete pincode
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/presets:
+    get:
+      parameters:
+      - description: Preset type slug
+        in: query
+        name: type
+        type: string
+      - description: Search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Preset'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List presets for any of the 26 CMS preset types (flavour, occasion,
+        balloon_color, etc.)
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Preset
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Preset'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Preset'
+      security:
+      - BearerAuth: []
+      summary: Create or update preset
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/presets/{id}:
+    delete:
+      parameters:
+      - description: Preset ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete preset
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/products:
+    get:
+      parameters:
+      - description: Search by name or SKU
+        in: query
+        name: search
+        type: string
+      - description: Filter by product_type
+        in: query
+        name: product_type
+        type: string
+      - description: Filter by status (draft|published|archived)
+        in: query
+        name: status
+        type: string
+      - description: Filter by category ID
+        in: query
+        name: category_id
+        type: integer
+      - description: Filter by city availability
+        in: query
+        name: city_id
+        type: integer
+      - description: Filter featured/trending
+        in: query
+        name: trending
+        type: boolean
+      - description: newest | price_asc | price_desc | discount
+        in: query
+        name: sort_by
+        type: string
+      - default: 1
+        description: Page
+        in: query
+        name: page
+        type: integer
+      - default: 20
+        description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.ProductsListResponse'
+      security:
+      - BearerAuth: []
+      summary: List products with pagination, search, filters, and sort
+      tags:
+      - Admin Catalog
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Product payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      security:
+      - BearerAuth: []
+      summary: Create a product with variants, personalization fields, addons, and
+        city overrides
+      tags:
+      - Admin Catalog
+  /api/v1/admin/products/{id}:
+    delete:
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Soft delete a product
+      tags:
+      - Admin Catalog
+    get:
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      security:
+      - BearerAuth: []
+      summary: Get full product detail including variants, images, options, personalization,
+        city overrides
+      tags:
+      - Admin Catalog
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Product payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      security:
+      - BearerAuth: []
+      summary: Update a product
+      tags:
+      - Admin Catalog
+  /api/v1/admin/products/{id}/duplicate:
+    post:
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Product'
+      security:
+      - BearerAuth: []
+      summary: Duplicate a product as a new draft copy
+      tags:
+      - Admin Catalog
+  /api/v1/admin/products/bulk-update:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Bulk update items
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.BulkProductUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Bulk update price, MRP, stock, or status for multiple products
+      tags:
+      - Admin Catalog
+  /api/v1/admin/products/export-csv:
+    get:
+      produces:
+      - text/csv
+      responses:
+        "200":
+          description: CSV content
+          schema:
+            type: string
+      security:
+      - BearerAuth: []
+      summary: Export filtered products as CSV
+      tags:
+      - Admin Catalog
+  /api/v1/admin/products/import-csv:
+    post:
+      consumes:
+      - multipart/form-data
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.CSVImportSummary'
+      security:
+      - BearerAuth: []
+      summary: Import products in bulk from CSV upload or raw CSV body
+      tags:
+      - Admin Catalog
+  /api/v1/admin/recent-works:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.RecentWork'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List recent decoration portfolio works
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Recent Work
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.RecentWork'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.RecentWork'
+      security:
+      - BearerAuth: []
+      summary: Create recent work showcase item
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/recent-works/{id}:
+    delete:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete recent work item
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/refunds:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.RefundsListResponse'
+      security:
+      - BearerAuth: []
+      summary: List processed refunds
+      tags:
+      - Admin Payments & Settlement
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Refund
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Refund'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Refund'
+      security:
+      - BearerAuth: []
+      summary: Process an idempotent refund against an order
+      tags:
+      - Admin Payments & Settlement
+  /api/v1/admin/reviews:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.ReviewsListResponse'
+      security:
+      - BearerAuth: []
+      summary: List product and home reviews
+      tags:
+      - Admin Phase 3 Reviews
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Review
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Review'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Review'
+      security:
+      - BearerAuth: []
+      summary: Create manual review
+      tags:
+      - Admin Phase 3 Reviews
+  /api/v1/admin/reviews/{id}:
+    delete:
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete review
+      tags:
+      - Admin Phase 3 Reviews
+  /api/v1/admin/reviews/{id}/moderate:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Review ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Moderation
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.ModerateReviewRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Review'
+      security:
+      - BearerAuth: []
+      summary: Approve, reject, reply or feature a review
+      tags:
+      - Admin Phase 3 Reviews
+  /api/v1/admin/roles:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.RoleWithPermissions'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List all RBAC roles and permission matrices
+      tags:
+      - Admin RBAC
+  /api/v1/admin/roles/{id}/permissions:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Role ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Permissions
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.UpdateRolePermissionsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Update permissions for an RBAC role
+      tags:
+      - Admin RBAC
+  /api/v1/admin/seller-payouts:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SellerPayout'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List seller payouts
+      tags:
+      - Admin Marketplace
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Payout
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SellerPayout'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SellerPayout'
+      security:
+      - BearerAuth: []
+      summary: Generate seller payout settlement batch
+      tags:
+      - Admin Marketplace
+  /api/v1/admin/seller-payouts/{id}/pay:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Payout ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: UTR
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.MarkPayoutPaidRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SellerPayout'
+      security:
+      - BearerAuth: []
+      summary: Mark payout paid with UTR reference
+      tags:
+      - Admin Marketplace
+  /api/v1/admin/sellers:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Seller'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List sellers (vendors only see their own profile)
+      tags:
+      - Admin Marketplace
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Seller
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Seller'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Seller'
+      security:
+      - BearerAuth: []
+      summary: Create or update seller
+      tags:
+      - Admin Marketplace
+  /api/v1/admin/sellers/{id}/kyc:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Seller ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: KYC
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.SellerKYCRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Seller'
+      security:
+      - BearerAuth: []
+      summary: Verify or reject seller KYC and update commission percentage
+      tags:
+      - Admin Marketplace
+  /api/v1/admin/sellers/products/{id}/approve:
+    put:
+      parameters:
+      - description: Product ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Approve or reject vendor product submission
+      tags:
+      - Admin Marketplace
+  /api/v1/admin/seo-redirects:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SEORedirect'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List 301 SEO redirects
+      tags:
+      - Admin Content & SEO
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Redirect
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SEORedirect'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SEORedirect'
+      security:
+      - BearerAuth: []
+      summary: Save 301 SEO redirect rule
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/seo-redirects/{id}:
+    delete:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete SEO redirect rule
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/settings:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SiteSetting'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List all site settings (theme, GST, cancellation, coins, cutoffs, mobile,
+        login methods)
+      tags:
+      - Admin Settings
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Setting
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SiteSetting'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SiteSetting'
+      security:
+      - BearerAuth: []
+      summary: Save site setting by key
+      tags:
+      - Admin Settings
+  /api/v1/admin/settings/backup:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - BearerAuth: []
+      summary: Export system configuration and CMS snapshot JSON backup
+      tags:
+      - Admin Settings
+  /api/v1/admin/sitemap.xml:
+    get:
+      produces:
+      - application/xml
+      responses:
+        "200":
+          description: XML Sitemap
+          schema:
+            type: string
+      summary: Generate dynamic sitemap.xml from published catalog, categories, blog
+        & pages
+      tags:
+      - Admin Content & SEO
+  /api/v1/admin/slot-capacity:
+    get:
+      parameters:
+      - description: City ID
+        in: query
+        name: city_id
+        required: true
+        type: integer
+      - description: YYYY-MM-DD
+        in: query
+        name: date
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SlotCapacityOverride'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List slot capacity ledger for a city & date
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Slot override
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SlotCapacityOverride'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SlotCapacityOverride'
+      security:
+      - BearerAuth: []
+      summary: Set slot capacity limit or block a delivery slot for a city & date
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/states:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.State'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List delivery states
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: State
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.State'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.State'
+      security:
+      - BearerAuth: []
+      summary: Create or update state
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/support-tickets:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SupportTicket'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List support tickets
+      tags:
+      - Admin Support & Inbox
+  /api/v1/admin/support-tickets/{id}/reply:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Ticket ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Reply
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.TicketReplyRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.SupportTicket'
+      security:
+      - BearerAuth: []
+      summary: Append reply to support ticket
+      tags:
+      - Admin Support & Inbox
+  /api/v1/admin/time-slots:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TimeSlotTemplate'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List delivery time slot templates
+      tags:
+      - Admin Geo & Presets
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Slot template
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TimeSlotTemplate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.TimeSlotTemplate'
+      security:
+      - BearerAuth: []
+      summary: Create or update time slot template
+      tags:
+      - Admin Geo & Presets
+  /api/v1/admin/users:
+    get:
+      parameters:
+      - description: Search username, email, full name
+        in: query
+        name: search
+        type: string
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Items per page
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_admin.UsersListResponse'
+      security:
+      - BearerAuth: []
+      summary: List admin users
+      tags:
+      - Admin Users
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Admin user input
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.CreateUserInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile'
+      security:
+      - BearerAuth: []
+      summary: Create admin user
+      tags:
+      - Admin Users
+  /api/v1/admin/users/{id}:
+    delete:
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_handler.MessageResponse'
+      security:
+      - BearerAuth: []
+      summary: Soft-delete admin user
+      tags:
+      - Admin Users
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Admin user update
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_service.UpdateUserInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.AdminProfile'
+      security:
+      - BearerAuth: []
+      summary: Update admin user
+      tags:
+      - Admin Users
+  /api/v1/admin/whatsapp/contacts:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.WhatsappContact'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List WhatsApp contacts
+      tags:
+      - Admin Support & Inbox
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Contact
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.WhatsappContact'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.WhatsappContact'
+      security:
+      - BearerAuth: []
+      summary: Create or update a WhatsApp contact
+      tags:
+      - Admin Support & Inbox
+  /api/v1/admin/whatsapp/contacts/{id}/messages:
+    get:
+      parameters:
+      - description: Contact ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.WhatsappMessage'
+            type: array
+      security:
+      - BearerAuth: []
+      summary: List WhatsApp messages for a contact
+      tags:
+      - Admin Support & Inbox
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Contact ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Message
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/internal_handler_admin.WhatsappSendRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.WhatsappMessage'
+      security:
+      - BearerAuth: []
+      summary: Send WhatsApp reply via asynq worker
+      tags:
+      - Admin Support & Inbox
+  /api/v1/public/coupons/validate:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Validate promo code against cart subtotal & city
+      tags:
+      - Public Storefront
+  /api/v1/public/home:
+    get:
+      parameters:
+      - description: Optional selected city ID
+        in: query
+        name: city_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Public Storefront Home payload (banners, ordered sections w/ slider_enabled,
+        products, cities, FAQs, reviews)
+      tags:
+      - Public Storefront
+  /api/v1/public/inquiries:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Inquiry
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ContactInquiry'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.ContactInquiry'
+      summary: Submit contact, callback, product inquiry, franchise or seller request
+      tags:
+      - Public Storefront
+  /api/v1/public/orders:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Order payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.CreateOrderInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_giftlaya_giftlaya-api_internal_domain.Order'
+      summary: Place public storefront order inside DB transaction with FOR UPDATE
+        inventory & slot locking
+      tags:
+      - Public Storefront
+  /api/v1/public/webhooks/razorpay:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Idempotent Razorpay payment gateway webhook receiver
+      tags:
+      - Public Payments
+  /healthz:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_handler_public.HealthResponse'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/internal_handler_public.HealthResponse'
+      summary: Service health check
+      tags:
+      - Public
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

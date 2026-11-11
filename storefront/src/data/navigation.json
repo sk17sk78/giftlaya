@@ -1,0 +1,858 @@
+[
+  {
+    "title": "Flowers",
+    "href": "/flowers",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Floral Types",
+        "links": [
+          {
+            "label": "All Flowers",
+            "href": "/flowers",
+            "badge": null
+          },
+          {
+            "label": "Carnations",
+            "href": "/carnations",
+            "badge": null
+          },
+          {
+            "label": "Combos",
+            "href": "/combos",
+            "badge": null
+          },
+          {
+            "label": "Gerberas",
+            "href": "/gerberas",
+            "badge": null
+          },
+          {
+            "label": "Lilies",
+            "href": "/lily",
+            "badge": null
+          },
+          {
+            "label": "Mixed Flowers",
+            "href": "/mixed-flowers",
+            "badge": null
+          },
+          {
+            "label": "Orchids",
+            "href": "/orchids",
+            "badge": null
+          },
+          {
+            "label": "Roses",
+            "href": "/roses",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "By Occasions",
+        "links": [
+          {
+            "label": "Birthday",
+            "href": "/flowers/birthday",
+            "badge": null
+          },
+          {
+            "label": "Anniversary",
+            "href": "/flowers/anniversary",
+            "badge": null
+          },
+          {
+            "label": "Valentine Day",
+            "href": "/valentines-day/flowers",
+            "badge": null
+          },
+          {
+            "label": "Wedding",
+            "href": "/flowers/weddings",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Roses by Colour",
+        "links": [
+          {
+            "label": "Pink",
+            "href": "/roses/pink",
+            "badge": null
+          },
+          {
+            "label": "Red",
+            "href": "/roses/red",
+            "badge": null
+          },
+          {
+            "label": "White",
+            "href": "/roses/white",
+            "badge": null
+          },
+          {
+            "label": "Yellow",
+            "href": "/roses/yellow",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Send Flowers To",
+        "links": [
+          {
+            "label": "Ahmedabad",
+            "href": "/flowers/ahmedabad",
+            "badge": null
+          },
+          {
+            "label": "Bangalore",
+            "href": "/flowers/bangalore",
+            "badge": null
+          },
+          {
+            "label": "Chennai",
+            "href": "/flowers/chennai",
+            "badge": null
+          },
+          {
+            "label": "Delhi NCR",
+            "href": "/flowers/delhi",
+            "badge": null
+          },
+          {
+            "label": "Hyderabad",
+            "href": "/flowers/hyderabad",
+            "badge": null
+          },
+          {
+            "label": "Kolkata",
+            "href": "/flowers/kolkata",
+            "badge": null
+          },
+          {
+            "label": "Mumbai",
+            "href": "/flowers/mumbai",
+            "badge": null
+          },
+          {
+            "label": "Pune",
+            "href": "/flowers/pune",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Cakes",
+    "href": "/cakes",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Special Occasions",
+        "links": [
+          {
+            "label": "All Cakes",
+            "href": "/cakes",
+            "badge": null
+          },
+          {
+            "label": "1st Birthday",
+            "href": "/1st-birthday-cakes",
+            "badge": null
+          },
+          {
+            "label": "Annaprashan",
+            "href": "/cakes/annaprashan",
+            "badge": null
+          },
+          {
+            "label": "Anniversary",
+            "href": "/cakes/anniversary",
+            "badge": null
+          },
+          {
+            "label": "Baby Shower",
+            "href": "/baby-shower-cakes",
+            "badge": null
+          },
+          {
+            "label": "Birthday",
+            "href": "/cakes/birthday",
+            "badge": null
+          },
+          {
+            "label": "Engagement",
+            "href": "/cakes/engagement",
+            "badge": null
+          },
+          {
+            "label": "Wedding",
+            "href": "/cakes/wedding",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Preferences Cakes",
+        "links": [
+          {
+            "label": "Bento Cakes",
+            "href": "/bento-cakes",
+            "badge": null
+          },
+          {
+            "label": "Eggless Cakes",
+            "href": "/cakes/eggless",
+            "badge": null
+          },
+          {
+            "label": "Flowers & Cakes",
+            "href": "/combos/flower-n-cakes",
+            "badge": null
+          },
+          {
+            "label": "Half Cakes",
+            "href": "/cakes/half-cakes",
+            "badge": null
+          },
+          {
+            "label": "Multi-Tier Cakes",
+            "href": "/cakes/multi-tier",
+            "badge": null
+          },
+          {
+            "label": "Sugar Free Cakes",
+            "href": "/cakes/sugarfree",
+            "badge": null
+          },
+          {
+            "label": "Theme Cakes",
+            "href": "/theme-cakes",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Flavour Choices",
+        "links": [
+          {
+            "label": "Black Forest Cakes",
+            "href": "/cakes/black-forest",
+            "badge": null
+          },
+          {
+            "label": "Butterscotch Cakes",
+            "href": "/cakes/butterscotch",
+            "badge": null
+          },
+          {
+            "label": "Chocolate Cakes",
+            "href": "/cakes/chocolate-cake",
+            "badge": null
+          },
+          {
+            "label": "Fruit Cakes",
+            "href": "/cakes/fruit-cake",
+            "badge": null
+          },
+          {
+            "label": "Rasmalai Cakes",
+            "href": "/cakes/rasmalai-cake",
+            "badge": null
+          },
+          {
+            "label": "Red Velvet Cakes",
+            "href": "/cakes/red-velvet",
+            "badge": null
+          },
+          {
+            "label": "Truffle Cakes",
+            "href": "/cakes/truffle-cakes",
+            "badge": null
+          },
+          {
+            "label": "Vanilla Cakes",
+            "href": "/cakes/vanilla-cakes",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Send Cakes to",
+        "links": [
+          {
+            "label": "Ahmedabad",
+            "href": "/cakes/ahmedabad",
+            "badge": null
+          },
+          {
+            "label": "Bangalore",
+            "href": "/cakes/bangalore",
+            "badge": null
+          },
+          {
+            "label": "Chennai",
+            "href": "/cakes/chennai",
+            "badge": null
+          },
+          {
+            "label": "Delhi NCR",
+            "href": "/cakes/delhi",
+            "badge": null
+          },
+          {
+            "label": "Hyderabad",
+            "href": "/cakes/hyderabad",
+            "badge": null
+          },
+          {
+            "label": "Kolkata",
+            "href": "/cakes/kolkata",
+            "badge": null
+          },
+          {
+            "label": "Mumbai",
+            "href": "/cakes/mumbai",
+            "badge": null
+          },
+          {
+            "label": "Pune",
+            "href": "/cakes/pune",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Decorations",
+    "href": "/balloon-decorations",
+    "badge": null,
+    "columns": [
+      {
+        "title": "By Occasions",
+        "links": [
+          {
+            "label": "All Decorations",
+            "href": "/balloon-decorations",
+            "badge": null
+          },
+          {
+            "label": "Anniversary",
+            "href": "/anniversary-decoration",
+            "badge": null
+          },
+          {
+            "label": "Baby Shower",
+            "href": "/baby-shower-decoration",
+            "badge": null
+          },
+          {
+            "label": "Baby Welcome",
+            "href": "/baby-welcome-decoration",
+            "badge": null
+          },
+          {
+            "label": "Birthday",
+            "href": "/birthday-decoration",
+            "badge": null
+          },
+          {
+            "label": "Christmas",
+            "href": "/christmas-decorations",
+            "badge": null
+          },
+          {
+            "label": "Festival",
+            "href": "/festival-decorations",
+            "badge": null
+          },
+          {
+            "label": "Kid's Birthday",
+            "href": "/decoration-for-kids",
+            "badge": null
+          },
+          {
+            "label": "Proposal",
+            "href": "/proposal-decoration",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Other Decorations",
+        "links": [
+          {
+            "label": "Cabana Decorations",
+            "href": "/cabana-decoration",
+            "badge": null
+          },
+          {
+            "label": "Canopy Decorations",
+            "href": "/canopy-decorations",
+            "badge": null
+          },
+          {
+            "label": "Car Boot Decorations",
+            "href": "/car-boot-decoration",
+            "badge": null
+          },
+          {
+            "label": "Ceremony Decorations",
+            "href": "/ceremony-decoration",
+            "badge": null
+          },
+          {
+            "label": "Flower Decorations",
+            "href": "/flower-decoration",
+            "badge": null
+          },
+          {
+            "label": "Office Decorations",
+            "href": "/office-decorations",
+            "badge": null
+          },
+          {
+            "label": "Room Decorations",
+            "href": "/room-decorations",
+            "badge": null
+          },
+          {
+            "label": "Stage Decorations",
+            "href": "/stage-decorations",
+            "badge": null
+          },
+          {
+            "label": "Terrace Decorations",
+            "href": "/terrace-decorations",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "City Wise",
+        "links": [
+          {
+            "label": "Ahmedabad",
+            "href": "/balloon-decorations/ahmedabad",
+            "badge": null
+          },
+          {
+            "label": "Bangalore",
+            "href": "/balloon-decorations/bangalore",
+            "badge": null
+          },
+          {
+            "label": "Chennai",
+            "href": "/balloon-decorations/chennai",
+            "badge": null
+          },
+          {
+            "label": "Delhi NCR",
+            "href": "/balloon-decorations/delhi",
+            "badge": null
+          },
+          {
+            "label": "Hyderabad",
+            "href": "/balloon-decorations/hyderabad",
+            "badge": null
+          },
+          {
+            "label": "Gurugram",
+            "href": "/balloon-decorations/gurgaon",
+            "badge": null
+          },
+          {
+            "label": "Kolkata",
+            "href": "/balloon-decorations/kolkata",
+            "badge": null
+          },
+          {
+            "label": "Mumbai",
+            "href": "/balloon-decorations/mumbai",
+            "badge": null
+          },
+          {
+            "label": "Pune",
+            "href": "/balloon-decorations/pune",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Gifts",
+    "href": "/gifts",
+    "badge": null,
+    "columns": [
+      {
+        "title": "By Relation",
+        "links": [
+          {
+            "label": "For Boyfriend",
+            "href": "/gifts/for-boyfriend",
+            "badge": null
+          },
+          {
+            "label": "For Dad",
+            "href": "/gifts/for-dad",
+            "badge": null
+          },
+          {
+            "label": "For Husband",
+            "href": "/gifts/for-husband",
+            "badge": null
+          },
+          {
+            "label": "For Girlfriend",
+            "href": "/gifts/for-girlfriend",
+            "badge": null
+          },
+          {
+            "label": "For Mom",
+            "href": "/gifts/for-mom",
+            "badge": null
+          },
+          {
+            "label": "For Wife",
+            "href": "/gifts/for-wife",
+            "badge": null
+          },
+          {
+            "label": "For Sister",
+            "href": "/gifts/for-sister",
+            "badge": null
+          },
+          {
+            "label": "For Brother",
+            "href": "/gifts/for-brother",
+            "badge": null
+          },
+          {
+            "label": "For Teacher",
+            "href": "/gifts/for-teachers",
+            "badge": null
+          },
+          {
+            "label": "For Boss",
+            "href": "/gifts/for-boss",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "By Occasions",
+        "links": [
+          {
+            "label": "Mother's Day",
+            "href": "/gifts/mothers-day",
+            "badge": null
+          },
+          {
+            "label": "Father's Day",
+            "href": "/gifts/fathers-day",
+            "badge": null
+          },
+          {
+            "label": "Friendship Day",
+            "href": "/gifts/friendship-day",
+            "badge": null
+          },
+          {
+            "label": "Valentines Day",
+            "href": "/gifts/valentines-day",
+            "badge": null
+          },
+          {
+            "label": "Christmas Day",
+            "href": "/gifts/christmas-day",
+            "badge": null
+          },
+          {
+            "label": "Diwali Gifts",
+            "href": "/gifts/diwali",
+            "badge": null
+          },
+          {
+            "label": "Anniversary Gifts",
+            "href": "/gifts/anniversary",
+            "badge": null
+          },
+          {
+            "label": "Engagement Gifts",
+            "href": "/gifts/engagement",
+            "badge": null
+          },
+          {
+            "label": "Karwa Chauth Gifts",
+            "href": "/gifts/karwa-chauth",
+            "badge": null
+          },
+          {
+            "label": "Wedding Gifts",
+            "href": "/gifts/wedding",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Hat Ke Gifts",
+        "links": [
+          {
+            "label": "Balloon Bouquet",
+            "href": "/balloon-bouquets",
+            "badge": null
+          },
+          {
+            "label": "Custom Gifts",
+            "href": "/custom",
+            "badge": null
+          },
+          {
+            "label": "Chocolates",
+            "href": "/chocolates",
+            "badge": null
+          },
+          {
+            "label": "Hampers",
+            "href": "/gift-hampers",
+            "badge": null
+          },
+          {
+            "label": "Personalized Gifts",
+            "href": "/gifts",
+            "badge": null
+          },
+          {
+            "label": "Plants",
+            "href": "/plants",
+            "badge": null
+          }
+        ]
+      },
+      {
+        "title": "Celebrations & Sentiments",
+        "links": [
+          {
+            "label": "I Am Sorry Gifts",
+            "href": "/gifts/i-am-sorry-gifts",
+            "badge": null
+          },
+          {
+            "label": "Thank You Gifts",
+            "href": "/gifts/thank-you",
+            "badge": null
+          },
+          {
+            "label": "Housewarming Gifts",
+            "href": "/gifts/housewarming",
+            "badge": null
+          },
+          {
+            "label": "Retirement Gifts",
+            "href": "/gifts/retirement",
+            "badge": null
+          },
+          {
+            "label": "New Year GIfts",
+            "href": "/gifts/new-year",
+            "badge": null
+          },
+          {
+            "label": "Baby Welcome GIfts",
+            "href": "/gifts/welcome-baby",
+            "badge": null
+          },
+          {
+            "label": "Baby Shower Gifts",
+            "href": "/gifts/baby-shower",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Experience",
+    "href": "/candle-light-dinner",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Candle Light Dinner",
+        "links": [
+          {
+            "label": "All Candle Light Dinner",
+            "href": "/candle-light-dinner",
+            "badge": null
+          },
+          {
+            "label": "Ahmedabad",
+            "href": "/candle-light-dinner/ahmedabad",
+            "badge": null
+          },
+          {
+            "label": "Bangalore",
+            "href": "/candle-light-dinner/bangalore",
+            "badge": null
+          },
+          {
+            "label": "Delhi NCR",
+            "href": "/candle-light-dinner/delhi",
+            "badge": null
+          },
+          {
+            "label": "Hyderabad",
+            "href": "/candle-light-dinner/hyderabad",
+            "badge": null
+          },
+          {
+            "label": "Mumbai",
+            "href": "/candle-light-dinner/mumbai",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Name Board",
+    "href": "/name-reveal-boards",
+    "badge": null
+  },
+  {
+    "title": "Wedding",
+    "href": "/bride-to-be-decoration",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Wedding Services",
+        "links": [
+          {
+            "label": "Bride To be Decoration",
+            "href": "/bride-to-be-decoration",
+            "badge": null
+          },
+          {
+            "label": "Bride Welcome Decoration",
+            "href": "/bride-welcome-decoration",
+            "badge": null
+          },
+          {
+            "label": "Engagement Ring Platter",
+            "href": "/engagement-ring-platter",
+            "badge": null
+          },
+          {
+            "label": "First Night Decorations",
+            "href": "/first-night-decorations",
+            "badge": null
+          },
+          {
+            "label": "Haldi Decorations",
+            "href": "/haldi-decoration",
+            "badge": null
+          },
+          {
+            "label": "Mehndi Decorations",
+            "href": "/mehndi-decoration",
+            "badge": null
+          },
+          {
+            "label": "Wedding Car Decorations",
+            "href": "/wedding-car-decoration",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Plants",
+    "href": "/plants",
+    "badge": null
+  },
+  {
+    "title": "Home Decor",
+    "href": "/trays",
+    "badge": null
+  },
+  {
+    "title": "Personalized",
+    "href": "/personalized-gifts",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Personalised Gifts",
+        "links": [
+          {
+            "label": "Personalized Mugs",
+            "href": "/personalized-mugs",
+            "badge": null
+          },
+          {
+            "label": "Personalized Cushions",
+            "href": "/personalized-cushions",
+            "badge": null
+          },
+          {
+            "label": "Custom T Shirts",
+            "href": "/custom-t-shirts",
+            "badge": null
+          },
+          {
+            "label": "Personalised Photo Frames",
+            "href": "/personalised-photo-frames",
+            "badge": null
+          },
+          {
+            "label": "Personalised Water Bottles",
+            "href": "/personalised-water-bottles",
+            "badge": null
+          },
+          {
+            "label": "Personalised Keychains",
+            "href": "/personalised-keychains",
+            "badge": null
+          },
+          {
+            "label": "Personalized Caricatures",
+            "href": "/personalized-caricatures",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Blog",
+    "href": "/blog",
+    "badge": null
+  },
+  {
+    "title": "Sell with Us",
+    "href": "/seller/registration",
+    "badge": null,
+    "columns": [
+      {
+        "title": "Partner With Giftlaya",
+        "links": [
+          {
+            "label": "Become a Seller / Vendor",
+            "href": "/seller/registration",
+            "badge": null
+          },
+          {
+            "label": "Giftlaya Franchise",
+            "href": "/franchise/request",
+            "badge": null
+          }
+        ]
+      }
+    ]
+  }
+]

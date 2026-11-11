@@ -1,0 +1,78 @@
+{
+  "rating": 4.3,
+  "totalReviews": 9,
+  "reviews": [
+    {
+      "id": 1,
+      "comment": "Absolutely loved the decoration! Everything was just like the pictures. Thank you Giftlaya for making my daughter’s birthday so special!",
+      "name": "Shaurya Saini",
+      "city": "Mathura",
+      "initials": "SS",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "comment": "Ordered a balloon bouquet for my wife’s birthday and it was delivered exactly on time. Beautifully done!",
+      "name": "Anay Jain",
+      "city": "Secunderabad",
+      "initials": "AJ",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "comment": "This was my second time booking Giftlaya and again, they didn’t disappoint. Great service and lovely team!",
+      "name": "Parag Hazarika",
+      "city": "Ajmer",
+      "initials": "PH",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "comment": "Very happy with the baby shower decor. It was elegant, simple, and exactly how we imagined.",
+      "name": "Sushant Arya",
+      "city": "Aurangabad",
+      "initials": "SA",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "comment": "Everything was neatly done and exactly like the reference I shared. Thank you Giftlaya team!",
+      "name": "Lavanya Kadam",
+      "city": "Howrah",
+      "initials": "LK",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "comment": "Booked them for a surprise birthday at midnight. They arrived on time and setup was ready before the clock struck 12.",
+      "name": "Shivam Naresh",
+      "city": "Howrah",
+      "initials": "SN",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "comment": "From booking to execution, everything was hassle-free. Love how easy it is to book on the website.",
+      "name": "Siddharth Ghai",
+      "city": "Kalyan-Dombivali",
+      "initials": "SG",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "comment": "The decoration added life to our small home celebration. Thank you Giftlaya for the magical touch.",
+      "name": "Sara Sarin",
+      "city": "Kota",
+      "initials": "SS",
+      "rating": 5
+    },
+    {
+      "id": 9,
+      "comment": "Booked them for my parents’ anniversary. They loved the surprise and clicked so many photos!",
+      "name": "Anay Dixit",
+      "city": "Chandigarh",
+      "initials": "AD",
+      "rating": 5
+    }
+  ]
+}

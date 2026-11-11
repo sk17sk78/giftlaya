@@ -1,0 +1,219 @@
+{
+  "shopByCategory": [
+    {
+      "title": "Flowers",
+      "href": "/flowers",
+      "image": "https://cdn.giftlaya.com/images/8/2e461552-a4d9-485b-b49d-9946424acc01.webp"
+    },
+    {
+      "title": "Decorations",
+      "href": "/balloon-decorations",
+      "image": "https://cdn.giftlaya.com/images/8/722a2647-8cdf-4026-8534-339df33d20b0.webp"
+    },
+    {
+      "title": "Cakes",
+      "href": "/cakes",
+      "image": "https://cdn.giftlaya.com/images/8/3ce928b9-d9f0-497e-813e-7e5b483fdf23.webp"
+    },
+    {
+      "title": "Plants",
+      "href": "/plants",
+      "image": "https://cdn.giftlaya.com/images/8/392615d8-f1cc-462a-a8cd-e2884f2ba305.webp"
+    },
+    {
+      "title": "Custom",
+      "href": "/custom",
+      "image": "https://cdn.giftlaya.com/images/8/a110487f-5fc4-42c6-b99d-098de429eb73.webp"
+    },
+    {
+      "title": "Chocolates",
+      "href": "/chocolates",
+      "image": "https://cdn.giftlaya.com/images/8/77eda5ba-a668-4a5d-a01e-b9a8279a4dd6.webp"
+    },
+    {
+      "title": "Name Board",
+      "href": "/name-reveal-boards",
+      "image": "https://cdn.giftlaya.com/images/8/ca5307c6-d716-4e68-aa05-967d82c6fa91.webp"
+    },
+    {
+      "title": "Corporate Gift",
+      "href": "/corporate-gift",
+      "image": "https://cdn.giftlaya.com/images/8/70297d78-a523-4956-acc0-7e8bb7095474.webp"
+    }
+  ],
+  "freshFlowers": [
+    {
+      "title": "Roses",
+      "href": "/roses",
+      "image": "https://cdn.giftlaya.com/images/18/05f7cce4-65c3-45f8-858b-091e953d0f17.webp"
+    },
+    {
+      "title": "Lilies",
+      "href": "/lily",
+      "image": "https://cdn.giftlaya.com/images/18/6c292a14-a303-4049-8310-4e656ed5f472.webp"
+    },
+    {
+      "title": "Orchids",
+      "href": "/orchids",
+      "image": "https://cdn.giftlaya.com/images/18/5f663cc6-584d-4f57-b78c-ac52d9d2c2e4.webp"
+    },
+    {
+      "title": "Gerberas",
+      "href": "/gerberas",
+      "image": "https://cdn.giftlaya.com/images/18/6bc5aaa8-ace0-4ac5-958c-22978dc79759.webp"
+    },
+    {
+      "title": "Carnations",
+      "href": "/carnations",
+      "image": "https://cdn.giftlaya.com/images/18/918d3609-503b-4db4-99f2-07081be75904.webp"
+    },
+    {
+      "title": "Cake & Flowers",
+      "href": "/combos/flower-n-cakes",
+      "image": "https://cdn.giftlaya.com/images/18/8f4fedf2-774e-4a0a-bb82-6f1a93e1753d.webp"
+    }
+  ],
+  "cakes30Mins": [
+    {
+      "title": "Red Velvet",
+      "href": "/cakes/red-velvet",
+      "image": "https://cdn.giftlaya.com/images/18/f21557ab-1b4c-418e-bf0a-a263ad5d5756.webp"
+    },
+    {
+      "title": "Chocolate",
+      "href": "/cakes/chocolate-cake",
+      "image": "https://cdn.giftlaya.com/images/18/8c8c0255-1743-4255-aff9-8e103c927f19.webp"
+    },
+    {
+      "title": "Rasmalai",
+      "href": "/cakes/rasmalai-cake",
+      "image": "https://cdn.giftlaya.com/images/18/f0dacb31-32fa-46fb-8d16-2a79e6c25b42.webp"
+    },
+    {
+      "title": "Fruit",
+      "href": "/cakes/fruit-cake",
+      "image": "https://cdn.giftlaya.com/images/18/e5b808de-b860-453e-b5a3-3a66462b1581.webp"
+    },
+    {
+      "title": "Vanilla",
+      "href": "/cakes/vanilla-cakes",
+      "image": "https://cdn.giftlaya.com/images/18/351f90e9-dc08-465f-901f-b8ba98b52b14.webp"
+    },
+    {
+      "title": "Butter Scotch",
+      "href": "/cakes/butterscotch",
+      "image": "https://cdn.giftlaya.com/images/18/ce2d920d-41db-4e60-a0ec-1bdbfc527411.webp"
+    },
+    {
+      "title": "Truffle",
+      "href": "/cakes/truffle-cakes",
+      "image": "https://cdn.giftlaya.com/images/18/d406aa68-a8f9-427c-9970-bb8bfbcd9166.webp"
+    },
+    {
+      "title": "Theme Cake",
+      "href": "/theme-cakes",
+      "image": "https://cdn.giftlaya.com/images/18/d104d837-4612-4ff7-9ea3-9b3d89c8bb37.webp"
+    }
+  ],
+  "bestDecorations": [
+    {
+      "title": "birthday decoration",
+      "href": "/birthday-decoration",
+      "image": "https://cdn.giftlaya.com/images/93/fd83cf19-66cd-4004-afff-a6b64f37a738.webp"
+    },
+    {
+      "title": "decoration for kids",
+      "href": "/decoration-for-kids",
+      "image": "https://cdn.giftlaya.com/images/93/77543e69-0000-47b3-a447-e2ad42b57268.webp"
+    },
+    {
+      "title": "baby shower decoration",
+      "href": "/baby-shower-decoration",
+      "image": "https://cdn.giftlaya.com/images/93/674e4dbe-bb27-4e90-b46e-ed1151d7a116.webp"
+    },
+    {
+      "title": "baby welcome decoration",
+      "href": "/baby-welcome-decoration",
+      "image": "https://cdn.giftlaya.com/images/93/0b7fb0ec-bbcc-4e67-a6bc-f3d3e0062da1.webp"
+    },
+    {
+      "title": "romantic decoration",
+      "href": "/romantic-decoration",
+      "image": "https://cdn.giftlaya.com/images/93/d74b7199-6fe3-46a0-8a98-ca91a5d453c6.webp"
+    },
+    {
+      "title": "haldi decoration",
+      "href": "/haldi-decoration",
+      "image": "https://cdn.giftlaya.com/images/93/6a7681e0-d719-4413-b4bc-c95292e1d4aa.webp"
+    }
+  ],
+  "bestSellerCakes": [
+    {
+      "title": "sugarfree",
+      "href": "/cakes/sugarfree",
+      "image": "https://cdn.giftlaya.com/images/93/640ff75e-f54c-4580-9219-78709672196d.webp"
+    },
+    {
+      "title": "bento cakes",
+      "href": "/bento-cakes",
+      "image": "https://cdn.giftlaya.com/images/93/868b5486-7688-4689-bf72-9f2e7bf2a5d5.webp"
+    },
+    {
+      "title": "theme cakes",
+      "href": "/theme-cakes",
+      "image": "https://cdn.giftlaya.com/images/93/70b9f0d0-132e-44cc-bb13-5e73a6bdc153.webp"
+    },
+    {
+      "title": "eggless",
+      "href": "/cakes/eggless",
+      "image": "https://cdn.giftlaya.com/images/93/84d57d6d-0f6f-4e45-8b8a-dc4e7f5e7228.webp"
+    },
+    {
+      "title": "baby shower cakes",
+      "href": "/baby-shower-cakes",
+      "image": "https://cdn.giftlaya.com/images/93/d392f9c9-34ec-4db2-8793-2cd635d35dc4.webp"
+    }
+  ],
+  "personalizedOccasions": [
+    {
+      "title": "Couple Tshirt",
+      "href": "/custom-t-shirts/for-couples",
+      "image": "https://cdn.giftlaya.com/images/18/cbf297fc-474e-4f83-813a-6506d4fca6b3.webp"
+    },
+    {
+      "title": "Custom Mugs",
+      "href": "/personalized-mugs",
+      "image": "https://cdn.giftlaya.com/images/18/e479c780-3641-474e-bdf4-81779cd18930.webp"
+    },
+    {
+      "title": "Custom Keychains",
+      "href": "/personalised-keychains",
+      "image": "https://cdn.giftlaya.com/images/18/d59b6910-68f6-4ec0-9488-afbf6c5d835d.webp"
+    },
+    {
+      "title": "Photo Frames",
+      "href": "/personalized-photo-frames",
+      "image": "https://cdn.giftlaya.com/images/18/ff2bd4ee-deec-4d28-90dd-499cd3e583a4.webp"
+    },
+    {
+      "title": "Custom Tees",
+      "href": "/custom-t-shirts",
+      "image": "https://cdn.giftlaya.com/images/18/5bf2fad6-cfe9-4a1c-aa91-1c6bfd28ecb1.webp"
+    },
+    {
+      "title": "Custom Cushions",
+      "href": "/personalized-cushions",
+      "image": "https://cdn.giftlaya.com/images/18/937b2371-ece1-4d8c-bc17-eb69309ccb33.webp"
+    },
+    {
+      "title": "Custom Bottles",
+      "href": "/personalised-water-bottles",
+      "image": "https://cdn.giftlaya.com/images/18/705a823a-9bd3-4037-82c6-3877b16988e2.webp"
+    },
+    {
+      "title": "Corporate Gifts",
+      "href": "/corporate-gift",
+      "image": "https://cdn.giftlaya.com/images/18/771e4c01-3d8e-4836-a4dd-e1de0aa71162.webp"
+    }
+  ]
+}

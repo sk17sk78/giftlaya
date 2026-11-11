@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
+  select,
+  textarea {
+    background-color: #ffffff;
+    color: #0f172a;
+    border-color: #e2e8f0;
+  }
+  .dark input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="file"]):not([type="range"]),
+  .dark select,
+  .dark textarea {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-color: #334155;
+  }
+}
+
+@layer base {
+  :root {
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Nunito", "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+    --theme-accent: #9b1b45;
+    --cms-primary: #4f6ef7;
+    --cms-surface: #f1f5f9;
+    --cms-text: #0f172a;
+  }
+
+  html,
+  body {
+    margin: 0;
+    overflow-x: clip;
+    font-family: var(--font-sans);
+    background-color: var(--cms-surface);
+    color: var(--cms-text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark body {
+    background-color: #090d16;
+    color: #f1f5f9;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--cms-primary) 22%, transparent);
+    color: var(--cms-text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--cms-primary);
+    outline-offset: 2px;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes bd-fade-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-bd-fade-up {
+  animation: bd-fade-up 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bd-fade-up,
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
